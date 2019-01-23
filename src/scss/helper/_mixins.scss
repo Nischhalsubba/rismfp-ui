@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+@mixin font-bold {
+    font-weight: 700;
+}
+
+@mixin font-ebold {
+    font-weight: 800;
+}
+
+@mixin font-regular {
+    font-weight: 400;
+}
+
+@mixin font-medium {
+    font-weight: 500;
+}
+
+@mixin font-thin {
+    font-weight: 100;
+}
+
+@mixin font-light {
+    font-weight: 300;
+}
+
+// Clearfix
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

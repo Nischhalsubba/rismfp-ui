@@ -12,8 +12,8 @@ var rename = require('gulp-rename');
 var image = require('gulp-imagemin');
 
 //style paths
-var scssfiles = 'styles/scss/customcss.scss',
-    cssDest = 'styles/css/';
+var scssfiles = './src/**/*.scss';
+var cssDest = './assets/css/';
 
 // Set the browser that you want to support
 const AUTOPREFIXER_BROWSERS = [
@@ -53,8 +53,8 @@ gulp.task('styles', function () {
 
 
 //scripts path
-var jsfiles = "scripts/js/*.js",
-    jsdest = "scripts/min_js/";
+var jsfiles = "./src/js/*.js",
+    jsdest = "./assets/js/";
 
 //Gulp task to minify javascript
 gulp.task("scripts", function () {
@@ -70,8 +70,8 @@ gulp.task("scripts", function () {
 
 
 //pages path
-var pgfiles = "pages/pages/*.html",
-    pgdest = "pages/minified_pages/";
+var pgfiles = "./src/pages/*html",
+    pgdest = "assets/pages/minified_pages/";
 
 //Minifying HTML files
 gulp.task('pages', function () {
@@ -87,8 +87,8 @@ gulp.task('pages', function () {
 
 
 //Images path
-var imgfiles = "images/raw/*",
-    imgdest = "images/compressed/"
+var imgfiles = "./src/images/raw/*",
+    imgdest = "./assets/images/"
 
 //Minifying the images
 gulp.task('images', function () {
@@ -96,7 +96,7 @@ gulp.task('images', function () {
         .pipe(image({
             interlaced: true,
             progressive: true,
-            optimizationLevel: 5,
+            optimizationLevel: 15,
             svgoPlugins: [{
                 removeViewBox: true
             }]
@@ -111,5 +111,8 @@ gulp.task('default', function () {
     gulp.watch(scssfiles, gulp.series('styles'));
     gulp.watch(jsfiles, gulp.series('scripts'));
     gulp.watch(pgfiles, gulp.series('pages'));
-    gulp.watch(imgfiles, gulp.series('images'));
+    gulp.watch(imgfiles,gulp.series('images'))
 });
+
+
+//gulp.task('default', gulp.parallel('styles','scripts','pages','images'));

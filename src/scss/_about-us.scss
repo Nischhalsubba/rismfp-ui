@@ -1,0 +1,37 @@
+.about_us {
+    
+
+    div {
+        .abt_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+
+            img {
+                margin: 50px 15px 50px 10px;
+                width: 500px;
+                height: 225px;
+            }
+
+            .abt_main {
+                background-color: rgba(229, 222, 214, 0.4);
+
+                .abt_info {
+                    padding: 50px 30px 30px 30px;
+
+                    h2 {
+                        width: 135px;
+                        border-bottom: 4px solid;
+                        border-color: #81B316;
+                    }
+
+                    p {
+                        font-family: 'Montserrat', sans-serif;
+                        text-align: justify;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

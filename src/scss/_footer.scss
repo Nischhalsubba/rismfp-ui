@@ -1,0 +1,45 @@
+footer {
+    
+
+    .bg-color {
+        background-color: #D8D8D8;
+    }
+
+    .cntct_info {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        div {
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            ul {
+                padding-left: 0px;
+
+                li {
+                    padding-top: 5px;
+                    text-decoration: none;
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    //End of Contact info
+    .footer-credit{
+        height: 125px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        .copyright{
+            background-color: #5A5958;
+        }
+
+        .hamroidea{
+            background-color: #81B316;
+        }
+    }
+
+}

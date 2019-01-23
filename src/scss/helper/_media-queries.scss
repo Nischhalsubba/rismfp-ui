@@ -1,0 +1,23 @@
+@media only screen and (max-width: 768px) {
+
+    //header
+    header {
+        nav {
+            button {
+                display: block !important;
+            }
+
+            .collapse {
+                display: block !important;
+            }
+
+            .menus_items {
+                display: none;
+            }
+
+            #adb {
+                display: none;
+            }
+        }
+    }
+}
