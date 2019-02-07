@@ -1,0 +1,140 @@
+// --------------------Download section -----------------
+.download_section {
+    h5 {
+        font-family: 'Fira Sans', sans-serif;
+        line-height: 30px;
+        font-weight: 300;
+    }
+}
+
+
+// ------------------.Recent_news-----------------------
+.Recent_news {
+    .section-title {
+        p {
+            font-weight: 500;
+        }
+
+        h3 {
+            display: inline !important;
+        }
+
+        small {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+
+    h5 {
+        line-height: 30px !important;
+    }
+}
+
+
+
+
+
+// ------------------- about_us -------------------------
+.about_us {
+    h1 {
+        font-family: 'Fira Sans', sans-serif;
+        text-transform: none !important;
+    }
+
+    p {
+        font-family: Raleway !important;
+        font-size: 17px;
+        line-height: 29px;
+        font-weight: 500;
+    }
+}
+
+
+// ------------------Footer ----------------------------------
+footer {
+    h4 {
+        font-weight: 400;
+    }
+}
+
+//------------------Downoad page-------------------------------
+.download_head {
+    h1 {
+        font-weight: 400;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+}
+
+.downloads {
+
+
+    .card-body {
+        color: $text-white;
+    }
+}
+
+//----------------------Contact page--------------------------------
+.contact_page {
+    .hero {
+        h1 {
+            font-weight: 400;
+        }
+
+        h4 {
+            font-weight: 300;
+        }
+    }
+}
+
+//------------------Web based MIS-------------------------------------
+.web-based-mis-head {
+    color: $text-white;
+
+    h1 {
+        font-weight: 400;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+}
+
+.web-bsed-mis {
+    p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    li {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+// ------------------------Introduction---------------------------------
+.introduction-head {
+    color: $text-white;
+
+
+    h1 {
+
+        font-weight: 400;
+    }
+
+    h4 {
+
+        font-weight: 300;
+    }
+}
+
+.introduction {
+    p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}

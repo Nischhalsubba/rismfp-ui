@@ -1,0 +1,64 @@
+//Varaibles
+@import 'helper/variables';
+
+//Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import'../../node_modules/bootstrap/scss/mixins/hover';
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/utilities/display";
+@import "../../node_modules/bootstrap/scss/utilities/shadows";
+
+
+//owl carousel
+@import './vendor/owl.carousel.scss';
+@import './vendor/owl.theme.default.scss';
+
+//mixins
+@import 'helper/mixins';
+
+//Media querries
+@import 'helper/media-queries';
+
+//Responsive carousel
+@import 'helper/responsive_carousel';
+
+//homepage
+@import 'layout/frontpage';
+
+//contact
+@import './pages/contact';
+
+//Downloads
+@import './pages/download';
+
+//Web base MIS
+@import './pages/web-based-mis';
+
+//Introduction
+@import './pages/introduction';
+
+//Custom
+@import './global';
+
+//Header
+@import 'layout/header';
+
+//Footer
+@import 'layout/footer';
+
+//Fonts
+@import 'helper/fonts';

@@ -2,315 +2,781 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!--Linking Style sheet-->
-    <link rel="stylesheet" href="../../css/style.css">
+  <!--Linking Style sheet-->
+  <link rel="stylesheet" href="../../css/scss/style.css" />
+  <link rel="stylesheet" href="../../css/scss/vendor/owl.carousel-min.css">
+  <link rel="stylesheet" href="../../css/scss/vendor/owl.theme.default-min.css">
 
-    <!--Linking Js file-->
-    <script src="../../js/main_custom.js"></script>
-    <script src="../../../node_modules/bootstrap/js/src/collapse.js"></script>
+  <!--Loading Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Cantata+One" rel="stylesheet" />
 
-
-    <!--Loading Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <!--Loading jQuery -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
-
-
-    <!-- test-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    <title>MIS:Raising Incomes of Small and Medium Farmers Project</title>
-
+  <title>MIS:Raising Incomes of Small and Medium Farmers Project</title>
 </head>
 
 <body>
+  <!--Start of Header-->
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="nav-brand" href="#"><img src="../../images/logo.svg" alt="" /></a>
 
-    <!--Start of Header-->
-    <header>
+        <!-- Collapse button -->
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="dark-blue-text"><i class="fas fa fa-bars"></i></span>
+        </button>
 
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent1">
+          <!-- Links -->
+          <ul class="navbar-nav menu-center ml-auto mr-auto">
+            <li class="nav-item active ">
+              <a class="nav-link link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./introduction.html">INTRODUCTION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./web-based-mis.html">WEB BASED MIS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#">NEWS AND UPDATE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./download.html">REPORTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="./contact.html">CONTACT</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="adb" href="#"><img src="../../images/Image 5.svg" alt="" /></a>
+      </div>
+      <!--Container-->
+    </nav>
+    <!--/.Navbar-->
+  </header>
+  <!--End of Header-->
+
+  <!-- Start of Banner-->
+  <section class="banner">
+    <div id="carouselExampleControls" class="carousel slide overlay" data-ride="carousel" data-interval="8000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../images/stephen-hocking-550667-unsplash.jpg" class="d-block w-100 img-fluid" alt="..." />
+          <div class="carousel-caption d-none d-md-block sub-title">
             <div class="container">
-                <a class="nav-brand" href="#"><img src="../../images/logo.svg" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse row justify-items-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav col-xl-12 mx-auto">
-                        <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">INTRODUCTION</a>
-                        <a class="nav-item nav-link" href="#">WEB BASED MIS</a>
-                        <a class="nav-item nav-link" href="#">NEWS & UPDATE</a>
-                        <a class="nav-item nav-link" href="#">REPORTS</a>
-                        <a class="nav-item nav-link" href="#">CONTACT</a>
-                    </div>
-
-                </div>
-                <a class="" href="#"><img src="../../images/Image 5.svg" alt=""></a>
+              <h3>
+                <a href="#">
+                  अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)
+                </a>
+              </h3>
+              <p class="h6">कार्यालय भवन सरेको सूचना</p>
+              <button type="button" class="btn btn-success waves-effect shadow-none rounded-0">
+                Read More--
+              </button>
             </div>
-
-        </nav>
-        <!--END-->
-    </header>
-    <!--End of Header-->
-
-    <!-- Start of Banner-->
-    <section class="banner">
-        <div id="carouselExampleControls" class="carousel slide overlay" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../../images/stephen-hocking-550667-unsplash.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block sub-title">
-                        <div class="container">
-                            <h5>अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)</h5>
-                            <p>कार्यालय भवन सरेको सूचना</p>
-                            <button type="button" class="btn btn-outline-success">Read More</button>
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../../images/alok-shenoy-100091-unsplash.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block sub-title">
-                        <div class="container">
-                            <h5>अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)</h5>
-                            <p>कार्यालय भवन सरेको सूचना</p>
-                            <button type="button" class="btn btn-outline-success">Read More</button>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="../../images/eddie-kopp-268600-unsplash.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block sub-title">
-                        <div class="container">
-                            <h5>अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)</h5>
-                            <p>कार्यालय भवन सरेको सूचना</p>
-                            <button type="button" class="btn btn-outline-success">Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+          </div>
         </div>
-    </section>
-    <!--End of Banner-->
-
-    <!--Start of Download_section-->
-    <section class="download_section">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌ कल) </h5>
-                            <p class="card-text">Extention: pdf</p>
-                            <p class="card-text">Size: 1064KB</p>
-                            <a href="#" class="btn btn-primary">Download</a>
-                            <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">३१ मे २०१८ सम्म स्वीकृत उप अायाेजनाहरूकाे विवरण (अनुदान संझाैता एवं
-                                निकासा
-                                रकम सहित)</h5>
-                            <p class="card-text">Extention: pdf</p>
-                            <p class="card-text">Size: 1064KB</p>
-                            <a href="#" class="btn btn-primary">Download</a>
-                            <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान सम्वन्धि सूचना (पाँचौ
-                                कल)</h5>
-                            <p class="card-text">Extention: pdf</p>
-                            <p class="card-text">Size: 1064KB</p>
-                            <a href="#" class="btn btn-primary">Download</a>
-                            <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान सम्वन्धि सूचना (पाँचौ
-                                कल)</h5>
-                            <p class="card-text">Extention: pdf</p>
-                            <p class="card-text">Size: 1064KB</p>
-                            <a href="#" class="btn btn-primary">Download</a>
-                            <a href="#" class="btn btn-primary">More Info</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-item">
+          <img src="../../images/alok-shenoy-100091-unsplash.jpg" class="d-block w-100 img-fluid" alt="..." />
+          <div class="carousel-caption d-none d-md-block sub-title">
+            <div class="container">
+              <h3>
+                <a href="#">
+                  अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)</a>
+              </h3>
+              <p class="h6">कार्यालय भवन सरेको सूचना</p>
+              <button type="button" class="btn btn-success waves-effect shadow-none rounded-0">
+                Read More
+              </button>
             </div>
+          </div>
         </div>
-    </section>
-    <!--ENd of download SEction-->
-
-
-
-
-
-    <!--Recent News Section-->
-    <section class="Recent_news">
-        <div class="container">
-
-            <div class="section-title">
-                <p>Recent News / <small>Keep you updated</small></p>
+        <div class="carousel-item">
+          <img src="../../images/eddie-kopp-268600-unsplash.jpg" class="d-block w-100 img-fluid" alt="..." />
+          <div class="carousel-caption d-none d-md-block sub-title">
+            <div class="container">
+              <h3>
+                <a href="#">अनुदान वर्ग २ का लागि SCN फर्मेट अद्यावधिक (पाँचौ कल)
+                </a>
+              </h3>
+              <p class="h6">कार्यालय भवन सरेको सूचना</p>
+              <button type="button" class="btn btn-success waves-effect shadow-none rounded-0">
+                Read More
+              </button>
             </div>
-
-            <div class="card-deck">
-                <div class="card">
-                    <img src="../../images/simon-fanger-605346-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान सम्वन्धि सूचना (पाँचौ कल)</h5>
-                        <a href="#" class="btn btn-primary">Read More</a>
-
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../../images/watering-watering-can-man-vietnam-162637.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">सम्झौता वार्ताका लागि सिफारीस उपआयोजनाहरु (मध्यपश्चिमाञ्चल, अनुदानबर्ग २
-                            र ३)</h5>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../../images/alok-shenoy-100091-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">कृषि–व्यवसाय अनुदान सहयोगका लागि आवेदन ‍(अवधारणा) दर्ता गर्ने म्याद थप
-                            गरिएको सूचना</h5>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-    <!--End of Recent News Section-->
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <!--End of Banner-->
 
+  <!--Download Section-->
 
-    <!--Start of About us-->
-    <section class="about_us">
+  <!--End of Download Section-->
+
+  <div class="container-fluid download_section">
+    <div class="container owl-carousel owl-theme">
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="centering text-center w-100 card">
+          <div class="img_holder rounded ml-auto mr-auto mb-4 shadow-lg">
+            <i class="fas fa-lg fa-file-pdf p-2"></i>
+            <!-- <img src="../../images/icons8-pdf-96.png" alt="" class="rounded-circle bg-dark p-2"> -->
+          </div>
+          <h5 class="card-body">
+            <a href="#">कृषि ब्यबसाय अनुदान अाब्हान सम्बन्धि सुचना (साताै‌
+              कल)</a>
+          </h5>
+          <a href="#" class="btn btn-success mb-2 card-footer w-75 mx-auto">Download</a>
+        </div>
+      </div>
+    </div>
+    <div class="owl-theme">
+      <div class="owl-controls">
+        <div class="custom-nav owl-nav"></div>
+      </div>
+    </div>
+  </div>
+  <!--Recent News section-->
+  <div class="Recent_news">
+    <div class="container-fluid position-relative">
+      <div class="container">
+        <div class="section-title">
+          <p>
+            <a href="#">
+              <h3>Recent News</h3>
+            </a> /
+            <small>Keep you updated</small>
+          </p>
+        </div>
         <div class="row">
-            <div class="col-sm-6 ">
-                <img src="../../images/Image 4.svg" alt="">
-            </div>
-
-
-            <div class="col-sm-6 bg-light homepage_about">
-                <h2><span>About us</span></h2>
-
-                <p>The project will reduce the market and business risks faced by small and medium farmers
-                    diversifying into high value commodities in 10 districts of the Mid-West (MWDR) and
-                    Far-West (FWDR) Development Regions of Nepal.</p>
-
-                <button type="button" class="btn btn-outline-dark">Read More</button>
-            </div>
-        </div>
-    </section>
-
-    <!--Start of About us-->
-
-
-
-    <!--Start of Maps-->
-    <section class="maps container-fluid" id="gMap">
-
-    </section>
-    <script src="https://maps.googleapis.com/maps/api/js?key=
-    AIzaSyDqXwPdwGbsTHs7rZylkjLY9RSOaUqZZmY
-    &callback=myMap"></script>
-    <!--End of Maps-->
-
-    <!--Start of footer-->
-    <footer>
-        <div class="container-fluid bg-color">
-            <div class="container cntct_info">
-                <img src="../../images/logo.svg" alt="MIS">
-
-                <div class="address">
-                    <h4>Address</h4>
-                    <ul>
-                        <li>Project Management Unit</li>
-                        <li>BP Chowk, Nepalgunj</li>
-                        <li>Banke</li>
-                        <li>Tel:977-81-528306</li>
-                        <li>Email:info@rismfp.gov.np</li>
-                    </ul>
+          <div id="carouselslider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-none d-lg-block">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/alok-shenoy-100091-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/watering-watering-can-man-vietnam-162637.jpeg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                  </div>
                 </div>
+                <!--End of d-lg-block-->
 
-                <div class="office_address">
-                    <h4>Liason office Address:</h4>
-                    <ul>
-                        <li>Harihar Bhabhan</li>
-                        <li>Lalitpur, Nepal</li>
-                        <li>Tel: +977-1-5010221</li>
-                        <li>Fax: +977-1-5523269</li>
-                    </ul>
+                <div class="d-none d-md-block d-lg-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!--End of d-md-block-->
 
-                <div class="useful_links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Ministry of Agricultural Development</a></li>
-                        <li><a href="#">National Portal</a></li>
-                        <li><a href="#">Asian Development Bank</a></li>
-                        <li><a href="#">Office of the Prime Minister and Counsil Minister</a></li>
-                    </ul>
+                <div class="d-none d-sm-block d-md-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                  </div>
                 </div>
+                <!--ENd of d-sm-block-->
+
+                <div class="d-block d-sm-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of cards-->
+                  </div>
+                </div>
+                <!--End of d-block-->
+              </div>
+              <!--Carousel Item-->
+              <div class="carousel-item">
+                <div class="d-none d-lg-block">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/joshua-lanzarini-727350-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/pexels-photo.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0 w-50">
+                      <a class="img-card" href="#">
+                        <img src="../../images/simon-fanger-605346-unsplash.jpeg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                  </div>
+                </div>
+                <!--End of d-lg-block-->
+
+                <div class="d-none d-md-block d-lg-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--End of d-md-block-->
+
+                <div class="d-none d-sm-block d-md-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of card-->
+                  </div>
+                </div>
+                <!--ENd of d-sm-block-->
+
+                <div class="d-block d-sm-none">
+                  <div class="slide-box slide-box d-flex justify-content-between">
+                    <div class="card border-0">
+                      <a class="img-card" href="#">
+                        <img src="../../images/krsto-jevtic-22216-unsplash.jpg" />
+                      </a>
+                      <div class="card-content">
+                        <h5 class="card-title">
+                          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            कृषि व्यवसाय अनुदान सहयोगका लागि आवेदन आव्हान
+                            सम्वन्धि सूचना (पाँचौ कल)-------
+                          </a>
+                        </h5>
+                        <p class="">News Description here ...</p>
+                      </div>
+                      <div class="card-read-more">
+                        <a href="$" class="btn  btn-block"> Read More </a>
+                      </div>
+                    </div>
+                    <!--End of cards-->
+                  </div>
+                </div>
+                <!--End of d-block-->
+              </div>
             </div>
-            <!--End of container cntct_info-->
+          </div>
         </div>
-        <!--End of container-fluid bg-color-->
+      </div>
+      <!--ENd of container-->
+      <a class="carousel-control-prev" href="#carouselslider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselslider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!--End of Recent News-->
 
+  <!--Start of About us-->
+  <section class="container-fluid about_us">
+    <div class="row">
+      <div class="col-6 text-center img-holder pl-0 pr-0">
+        <img src="../../images/Image 4.svg" class="img-fluid" />
+      </div>
 
-        <div class="footer-credit">
-            <div class="copyright container">
-                <p>© Copyright 2019. All Rights Reserved.</p>
-            </div>
+      <div class="col-6 bg-light homepage_about pl-5 pr-5 pb-4 text-center">
+        <h1><span>About The Project</span></h1>
 
-            <div class="hamroidea">
-                <p>Developed by Hamro Idea.</p>
-            </div>
+        <p class="text-justify">
+          The project will reduce the market and business risks faced by small
+          and medium farmers diversifying into high value commodities in 10
+          districts of the Mid-West (MWDR) and Far-West (FWDR) Development
+          Regions of Nepal.These two regions have the lowest human development
+          indices within Nepal due to limited investment in access to
+          services, physical, social and economic infrastructure.
+        </p>
+
+        <button type="button" class="btn btn-outline-dark btn-lg">
+          Read More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--ENd of About us-->
+
+  <!--Start of Maps-->
+  <div class="container-fluid pt-3 pb-3 text-center map-title d-flex shadow-lg">
+    <h1 class="container mx-auto my-auto"><span>
+        Sub Projects Map
+      </span></h1>
+  </div>
+  <section class="maps container-fluid" id="gMap">
+    <div class="g-map pt-3">
+      <script src="https://maps.googleapis.com/maps/api/js?key=
+          AIzaSyDqXwPdwGbsTHs7rZylkjLY9RSOaUqZZmY
+          &callback=myMap"></script>
+    </div>
+  </section>
+
+  <!--End of Maps-->
+
+  <!--Start of footer-->
+  <footer>
+    <div class="container-fluid bg-color">
+      <div class="container cntct_info row mx-auto">
+        <img src="../../images/logo.svg" alt="MIS" class="col-3 pr-5" />
+
+        <div class="address col-3">
+          <h4><span> Address</span></h4>
+          <ul>
+            <li>Project Management Unit</li>
+            <li>BP Chowk, Nepalgunj</li>
+            <li>Banke</li>
+            <li>Tel:977-81-528306</li>
+            <li>Email:info@rismfp.gov.np</li>
+          </ul>
         </div>
-    </footer>
-    <!--End of footer-->
+
+        <hr />
+
+        <div class="office_address col-3">
+          <h4><span>Liason office Address: </span></h4>
+          <ul>
+            <li>Harihar Bhabhan</li>
+            <li>Lalitpur, Nepal</li>
+            <li>Tel: +977-1-5010221</li>
+            <li>Fax: +977-1-5523269</li>
+          </ul>
+        </div>
+
+        <div class="useful_links col-3">
+          <h4><span> Useful Links </span></h4>
+          <ul>
+            <li><a href="#">Ministry of Agricultural Development</a></li>
+            <li><a href="#">National Portal</a></li>
+            <li><a href="#">Asian Development Bank</a></li>
+            <li>
+              <a href="#">Office of the Prime Minister and Counsil Minister</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--End of container cntct_info-->
+    </div>
+    <!--End of container-fluid bg-color-->
+
+    <!--Start of footer credit-->
+    <div class="footer-credit row container-fluid ml-0 mr-0 pl-0 pr-0">
+      <div class="copyright col-8 d-flex align-items-center justify-content-center" align="center">
+        <p class="container text-white mb-0 text-muted">
+          © Copyright 2019. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="hamroidea col-4 d-flex align-items-center justify-content-center" align="center">
+        <p class="container mb-0 text-light">
+          Developed by <a href="#" class="text-light">Hamro Idea. </a>
+        </p>
+      </div>
+    </div>
+    <!--End of footer credit-->
+  </footer>
+  <!--End of footer-->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <!--Linking Js file-->
+  <script src="../../js/main_custom.js"></script>
+  <script src="../../js/owl.carousel.js"></script>
+
 
 </body>
 

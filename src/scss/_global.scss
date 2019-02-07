@@ -1,4 +1,28 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height:32px;
+    //font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Fira Sans', sans-serif !important;
+    line-height: 36px !important;
+    background-color: $web-primary !important;
+    font-size: 20px !important;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+button:focus {
+    border: none;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
 }

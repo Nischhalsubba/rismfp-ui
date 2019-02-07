@@ -1,0 +1,46 @@
+//Header
+header {
+    background-color: $primary;
+
+    nav {
+        .container {
+            img {
+                width: 115px;
+                height: 100px;
+            }
+
+            .menu-center {
+
+
+                .link {
+                    color: $grey;
+                    display: inline-block;
+                    text-decoration: none;
+                    list-style: none;
+                    display: inline-block !important;
+                }
+
+                .link::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 3px;
+                    background: $green;
+                    transition: width .5s;
+                }
+
+                .link:hover::after {
+                    width: 100%;
+                }
+
+                a {
+                    padding-right: 20px !important;
+                    letter-spacing: -1px !important;
+
+                }
+            }
+
+            //-------------
+        }
+    }
+}

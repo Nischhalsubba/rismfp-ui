@@ -1,0 +1,62 @@
+.contact_page {
+    //background-color: $light-green;
+    .hero {
+        background-image: url('../../images/hero-contact-us.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        position: relative;
+
+
+        ::before {
+            content: ""; // ::before and ::after both require content
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+        * {
+            color: $text-white;
+            z-index: 100;
+        }
+
+        nav{
+            position: relative;
+        }
+    }
+
+    .contact_sidebar {
+        .top {
+            height: 40% !important;
+            background-color: $grey;
+            color: $text-white;
+
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .bottom {
+            background-color: $web-Secondary;
+            height: 60%;
+
+            ul {
+                font-size: 14px;
+                line-height: 35px;
+
+                a{
+                    text-decoration: none;
+                    list-style-type: none;
+                    color: $grey;
+                }
+            }
+        }
+    }
+}
+
+//-------------- End of contact page----------------

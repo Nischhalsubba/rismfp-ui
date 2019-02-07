@@ -12,7 +12,7 @@ var rename = require('gulp-rename');
 var image = require('gulp-imagemin');
 
 //style paths
-var scssfiles = './src/**/*.scss';
+var scssfiles = './src/**/**/*scss';
 var cssDest = './assets/css/';
 
 // Set the browser that you want to support
