@@ -1,8 +1,38 @@
+//FOr recent news
+$(document).ready(function () {
+    $('.custom-owl-carousel').owlCarousel({
+        loop: true,
+        stagePadding: 0,
+        margin: 15,
+        responsiveClass: true,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 2,
+                nav: true
+            },
+            1000: {
+                items: 3,
+                nav: true,
+                loop: true
+            }
+        }
+    })
+});
+
 //for download section
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 10,
+        stagePadding: 6,
+        margin: 14,
         responsiveClass: true,
         nav: true,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
@@ -15,19 +45,18 @@ $(document).ready(function () {
             },
             600: {
                 items: 3,
-                nav: false
+                nav: true
             },
             1000: {
                 items: 5,
                 nav: true,
-                loop: false
+                loop: true
             }
         }
     })
+
+
 });
-
-
-
 
 
 //For map
@@ -39,4 +68,4 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("gMap"), mapProp);
 }
 
-//
+//about me

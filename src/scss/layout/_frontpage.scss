@@ -150,68 +150,47 @@
 
 
 //About us secttion
-section.about_us {
-    height: 70vh;
-    overflow-x: hidden;
-    /* Enable scrolling on the page. */
-    overflow-y: auto;
-    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-    perspective: 2px;
+.about_us {
+    
+    height: 50vh;
+    position: relative;
 
-    .section {
-        position: relative;
-        min-height: 50vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-shadow: 0 0 5px #000;
+    .parallax-window {
+        min-height: 800px !important;
+        background-size: cover;
+        background: transparent;
     }
 
-    .parallax::after {
-        /* Display and position the pseudo-element */
-        content: " ";
+    .homepage_about {
+        z-index: 150 !important;
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        /* Move the pseudo-element back away from the camera,
-         * then scale it back up to fill the viewport.
-         * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-        transform: translateZ(-1px) scale(1.5);
-        /* Force the background image to fill the whole element. */
-        background-size: cover;
-        /* Keep the image from overlapping sibling elements. */
-        z-index: -1;
-    }
+        color: $text-white;
 
-    .bg::after {
-        min-height: 580px;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-image: url('../../images/Image 4.svg');
-    }
+        h1 {
+            padding-top: 40px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
 
-
-    .row {
-        .homepage_about {
-
-            h1 {
-                padding-top: 40px;
-                text-transform: uppercase;
-                margin-bottom: 25px;
-
-                span {
-                    border-bottom: 4px solid;
-                    border-color: #81B316;
-                    padding: 5px 0;
-                }
+            span {
+                border-bottom: 4px solid;
+                border-color: #81B316;
+                padding: 5px 0;
             }
         }
     }
+
+}
+
+.about_us:after{
+    content: "";
+    display: block;
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5)
 }
 
 
