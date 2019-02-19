@@ -18027,7 +18027,7 @@ input[type="button"].btn-block {
 .about_us {
   background: url("../../images/Image 4.svg") no-repeat center center fixed;
   display: table;
-  height: 53%;
+  height: 55%;
   position: relative;
   width: 100%;
   background-size: cover;
@@ -18173,32 +18173,30 @@ input[type="button"].btn-block {
   background-image: none;
 }
 
-.contact_page .hero {
-  background-image: url("../../images/hero-contact-us.jpg");
-  background-position: center;
+.contact-head {
+  background: url("../../images/hero-contact-us.jpg") no-repeat center center fixed;
+  display: table;
+  height: 55%;
+  position: relative;
+  width: 100%;
   background-size: cover;
-  height: 50vh;
+  z-index: 1;
+  color: #FFFFFF;
+}
+
+.contact-head nav {
   position: relative;
 }
 
-.contact_page .hero ::before {
+.contact-head::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
-}
-
-.contact_page .hero * {
-  color: #FFFFFF;
-  z-index: 100;
-}
-
-.contact_page .hero nav {
-  position: relative;
 }
 
 .contact_page .contact_sidebar .top {
@@ -18228,11 +18226,12 @@ input[type="button"].btn-block {
 }
 
 .download_head {
-  background-image: url("../../images/rawpixel-603653-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
+  background: url("../../images/rawpixel-603653-unsplash.jpg") no-repeat center center fixed;
+  display: table;
+  height: 55%;
   position: relative;
+  width: 100%;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -18247,7 +18246,7 @@ input[type="button"].btn-block {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
@@ -18282,11 +18281,12 @@ input[type="button"].btn-block {
 }
 
 .web-based-mis-head {
-  background-image: url("../../images/rawpixel-653764-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
+  background: url("../../images/rawpixel-653764-unsplash.jpg") no-repeat center center fixed;
+  display: table;
+  height: 55%;
   position: relative;
+  width: 100%;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -18301,7 +18301,7 @@ input[type="button"].btn-block {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
@@ -18319,11 +18319,12 @@ input[type="button"].btn-block {
 }
 
 .introduction-head {
-  background-image: url("../../images/hand-microphone-mic-hold.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
+  background: url("../../images/hand-microphone-mic-hold.jpg") no-repeat center center fixed;
+  display: table;
+  height: 55%;
   position: relative;
+  width: 100%;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -18338,7 +18339,7 @@ input[type="button"].btn-block {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
@@ -18542,11 +18543,11 @@ footer h4 {
   color: #FFFFFF;
 }
 
-.contact_page .hero h1 {
+.contact-head h1 {
   font-weight: 400;
 }
 
-.contact_page .hero h4 {
+.contact-head h4 {
   font-weight: 300;
 }
 

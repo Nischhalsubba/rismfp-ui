@@ -1,9 +1,14 @@
 .web-based-mis-head {
-    background-image: url('../../images/rawpixel-653764-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 50vh;
+    background: url('../../images/rawpixel-653764-unsplash.jpg') no-repeat center center fixed;
+    display: table;
+    //height: 55vh;
+    height: 55%;
     position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     z-index: 1;
 
     h1 {
@@ -18,7 +23,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
 }

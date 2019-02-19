@@ -1,34 +1,35 @@
-.contact_page {
-    //background-color: $light-green;
-    .hero {
-        background-image: url('../../images/hero-contact-us.jpg');
-        background-position: center;
-        background-size: cover;
-        height: 50vh;
+.contact-head {
+    background: url('../../images/hero-contact-us.jpg') no-repeat center center fixed;
+    display: table;
+    //height: 55vh;
+    height: 55%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+    color: $text-white;
+
+    nav {
         position: relative;
-
-
-        ::before {
-            content: ""; // ::before and ::after both require content
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50vh;
-            background-color: rgba(0, 0, 0, 0.2);
-            z-index: -1;
-        }
-
-        * {
-            color: $text-white;
-            z-index: 100;
-        }
-
-        nav{
-            position: relative;
-        }
     }
 
+}
+
+.contact-head::after {
+    content: ""; // ::before and ::after both require content
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.contact_page {
     .contact_sidebar {
         .top {
             height: 40% !important;
@@ -49,7 +50,7 @@
                 font-size: 14px;
                 line-height: 35px;
 
-                a{
+                a {
                     text-decoration: none;
                     list-style-type: none;
                     color: $grey;
