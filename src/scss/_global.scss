@@ -1,3 +1,8 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     //font-family: 'Montserrat', sans-serif !important;
     font-family: 'Fira Sans', sans-serif !important;
@@ -5,6 +10,8 @@ body {
     background-color: $web-primary !important;
     font-size: 20px !important;
     font-weight: 300;
+    height: 100%;
+    width: 100%;
 }
 
 p {

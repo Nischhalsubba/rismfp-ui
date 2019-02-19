@@ -92,27 +92,7 @@
     }
 
     .about_us {
-        margin: 0 !important;
-        padding: 0 !important;
-
-        .row {
-            display: contents;
-
-            div {
-                display: block !important;
-                max-width: 100% !important;
-            }
-
-            .img-holder {
-                margin-top: 0px !important;
-                margin-bottom: 0px !important;
-
-                img {
-                    margin: 0;
-                    padding: 0 !important;
-                }
-            }
-        }
+        height: 108% !important;
     }
 
     // End of About us
@@ -174,11 +154,15 @@
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
     header {
         .adb {
             display: none;
         }
+    }
+
+    .about_us {
+        height: 90% !important;
     }
 
 }

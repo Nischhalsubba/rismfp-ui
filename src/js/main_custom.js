@@ -6,6 +6,7 @@ $(document).ready(function () {
         margin: 15,
         responsiveClass: true,
         nav: true,
+        dots:false,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
@@ -35,6 +36,7 @@ $(document).ready(function () {
         margin: 14,
         responsiveClass: true,
         nav: true,
+        dots:false,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],

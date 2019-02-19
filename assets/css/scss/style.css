@@ -17857,23 +17857,7 @@ input[type="button"].btn-block {
     display: block;
   }
   .about_us {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .about_us .row {
-    display: contents;
-  }
-  .about_us .row div {
-    display: block !important;
-    max-width: 100% !important;
-  }
-  .about_us .row .img-holder {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-  }
-  .about_us .row .img-holder img {
-    margin: 0;
-    padding: 0 !important;
+    height: 108% !important;
   }
   footer .cntct_info {
     display: block;
@@ -17914,9 +17898,12 @@ input[type="button"].btn-block {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
   header .adb {
     display: none;
+  }
+  .about_us {
+    height: 90% !important;
   }
 }
 
@@ -18038,18 +18025,16 @@ input[type="button"].btn-block {
 }
 
 .about_us {
-  height: 50vh;
+  background: url("../../images/Image 4.svg") no-repeat center center fixed;
+  display: table;
+  height: 53%;
   position: relative;
-}
-
-.about_us .parallax-window {
-  min-height: 800px !important;
+  width: 100%;
   background-size: cover;
-  background: transparent;
 }
 
 .about_us .homepage_about {
-  z-index: 150 !important;
+  z-index: 10 !important;
   position: absolute;
   color: #FFFFFF;
 }
@@ -18066,16 +18051,16 @@ input[type="button"].btn-block {
   padding: 5px 0;
 }
 
-.about_us:after {
+.about_us::before {
   content: "";
   display: block;
-  z-index: 100;
+  z-index: 9;
   position: absolute;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .map-title {
@@ -18370,12 +18355,19 @@ input[type="button"].btn-block {
   padding-right: 10px;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Fira Sans', sans-serif !important;
   line-height: 36px !important;
   background-color: #FFFFFF !important;
   font-size: 20px !important;
   font-weight: 300;
+  height: 100%;
+  width: 100%;
 }
 
 p {
@@ -18529,8 +18521,8 @@ footer .footer-credit .hamroidea p a {
 
 .about_us p {
   font-family: Raleway !important;
-  font-size: 17px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 35px;
   font-weight: 500;
 }
 

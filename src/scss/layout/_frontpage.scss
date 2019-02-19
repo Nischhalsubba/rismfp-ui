@@ -151,18 +151,19 @@
 
 //About us secttion
 .about_us {
-    
-    height: 50vh;
+    background: url("../../images/Image 4.svg") no-repeat center center fixed;
+    display: table;
+    //height: 55vh;
+    height: 53%;
     position: relative;
-
-    .parallax-window {
-        min-height: 800px !important;
-        background-size: cover;
-        background: transparent;
-    }
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     .homepage_about {
-        z-index: 150 !important;
+        z-index: 10 !important;
         position: absolute;
         color: $text-white;
 
@@ -181,16 +182,16 @@
 
 }
 
-.about_us:after{
+.about_us::before {
     content: "";
     display: block;
-    z-index: 100;
+    z-index: 9;
     position: absolute;
     height: 100%;
     top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.5)
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
 }
 
 
