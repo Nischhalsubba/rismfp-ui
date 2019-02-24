@@ -2,18 +2,33 @@
 
     //header
     header {
-
-
         .menu-center {
             li {
                 text-align: center;
             }
+        }
+
+        .adb {
+            display: none;
         }
     }
 
     .banner {
         .carousel-inner {
             height: 100% !important;
+        }
+
+        .carousel-caption {
+            bottom: 5% !important;
+
+            h3 {
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 10px;
+                height: 25px;
+            }
         }
     }
 
@@ -70,8 +85,14 @@
 
     .Recent_news {
         .section-title {
-            * {
-                padding-left: 10px;
+            padding-left: 10px !important;
+
+            h3 {
+                font-size: 14px;
+            }
+
+            small {
+                font-size: 14px !important;
             }
         }
 
@@ -92,7 +113,11 @@
     }
 
     .about_us {
-        height: 108% !important;
+        height: 100% !important;
+
+        .homepage_about{
+            position: relative !important;
+        }
     }
 
     // End of About us

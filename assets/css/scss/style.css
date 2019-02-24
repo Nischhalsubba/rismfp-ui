@@ -17803,8 +17803,21 @@ input[type="button"].btn-block {
   header .menu-center li {
     text-align: center;
   }
+  header .adb {
+    display: none;
+  }
   .banner .carousel-inner {
     height: 100% !important;
+  }
+  .banner .carousel-caption {
+    bottom: 5% !important;
+  }
+  .banner .carousel-caption h3 {
+    font-size: 12px;
+  }
+  .banner .carousel-caption button {
+    font-size: 10px;
+    height: 25px;
   }
   .download_section .full-width {
     width: 100% !important;
@@ -17845,8 +17858,14 @@ input[type="button"].btn-block {
     position: absolute;
     right: 0px;
   }
-  .Recent_news .section-title * {
-    padding-left: 10px;
+  .Recent_news .section-title {
+    padding-left: 10px !important;
+  }
+  .Recent_news .section-title h3 {
+    font-size: 14px;
+  }
+  .Recent_news .section-title small {
+    font-size: 14px !important;
   }
   .Recent_news .row .carousel-inner .col {
     max-width: 80%;
@@ -17857,7 +17876,10 @@ input[type="button"].btn-block {
     display: block;
   }
   .about_us {
-    height: 108% !important;
+    height: 100% !important;
+  }
+  .about_us .homepage_about {
+    position: relative !important;
   }
   footer .cntct_info {
     display: block;
@@ -17943,8 +17965,8 @@ input[type="button"].btn-block {
   color: white;
 }
 
-.banner .overlay .carousel-inner .carousel-item .carousel-caption .container h3,
-.banner .overlay .carousel-inner .carousel-item .carousel-caption .container p {
+.banner .overlay .carousel-inner .carousel-item .sub-title .container h3,
+.banner .overlay .carousel-inner .carousel-item .sub-title .container p {
   margin-bottom: 15px;
 }
 
@@ -18051,7 +18073,7 @@ input[type="button"].btn-block {
   padding: 5px 0;
 }
 
-.about_us::before {
+.about_us::after {
   content: "";
   display: block;
   z-index: 9;
@@ -18521,10 +18543,10 @@ footer .footer-credit .hamroidea p a {
 }
 
 .about_us p {
-  font-family: Raleway !important;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  line-height: 35px;
-  font-weight: 500;
+  line-height: 34px;
+  font-weight: 400;
 }
 
 footer h4 {

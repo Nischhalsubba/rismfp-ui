@@ -2,7 +2,7 @@
 .banner {
     .overlay {
         .carousel-inner {
-            height: 80vh;
+            height: 80vh;   
 
             .carousel-item.active,
             .carousel-item-next,
@@ -34,13 +34,6 @@
                             margin-left: 2px;
                             color: white;
                         }
-                    }
-                }
-
-                //-------------Sub title-------------
-
-                .carousel-caption {
-                    .container {
 
                         h3,
                         p {
@@ -48,6 +41,9 @@
                         }
                     }
                 }
+
+                //-------------Sub title-------------
+
             }
 
             //-------------Carousel item-------------
@@ -144,9 +140,7 @@
         }
     }
 }
-
 //End of Downlaod section
-
 
 
 //About us secttion
@@ -182,7 +176,7 @@
 
 }
 
-.about_us::before {
+.about_us::after {
     content: "";
     display: block;
     z-index: 9;
@@ -191,7 +185,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 
