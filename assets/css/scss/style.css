@@ -18483,12 +18483,12 @@ input[type="button"].btn-block {
 }
 
 .news .post-meta .post-category a:hover {
-  background-color: #00A5B4;
+  background-color: #81B316;
   color: white;
 }
 
 .news .post-meta .post-category a:hover:after {
-  border-left-color: #00A5B4;
+  border-left-color: #81B316;
 }
 
 .news .mst-recent-posts {
