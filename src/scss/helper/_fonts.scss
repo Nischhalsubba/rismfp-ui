@@ -79,6 +79,34 @@ footer {
     }
 }
 
+
+//---------------------News and notices--------------------------------
+.news_head {
+    color: $text-white;
+    h1 {
+        font-weight: 400;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+}
+
+.news{
+    .mst-widget-title{
+        font-size: 20px !important;
+        font-weight: 500;
+    }
+
+    .sidebar{
+        .sidebar-content{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+        }
+    }
+}
+
 //----------------------Contact page--------------------------------
 .contact-head {
     h1 {

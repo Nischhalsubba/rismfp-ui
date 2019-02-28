@@ -1,3 +1,6 @@
+
+
+
 //FOr recent news
 $(document).ready(function () {
     $('.custom-owl-carousel').owlCarousel({
@@ -6,7 +9,7 @@ $(document).ready(function () {
         margin: 15,
         responsiveClass: true,
         nav: true,
-        dots:false,
+        dots: false,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
@@ -36,7 +39,7 @@ $(document).ready(function () {
         margin: 14,
         responsiveClass: true,
         nav: true,
-        dots:false,
+        dots: false,
         navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
@@ -69,5 +72,3 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("gMap"), mapProp);
 }
-
-//about me
