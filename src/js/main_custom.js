@@ -1,6 +1,3 @@
-
-
-
 //FOr recent news
 $(document).ready(function () {
     $('.custom-owl-carousel').owlCarousel({
@@ -33,10 +30,10 @@ $(document).ready(function () {
 
 //for download section
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
+    $('.download-carousel').owlCarousel({
         loop: true,
-        stagePadding: 6,
-        margin: 14,
+        stagePadding: 0,
+        margin: 15,
         responsiveClass: true,
         nav: true,
         dots: false,
@@ -53,16 +50,15 @@ $(document).ready(function () {
                 nav: true
             },
             1000: {
-                items: 5,
+                items: 4,
                 nav: true,
-                loop: true
             }
+            
         }
     })
 
 
 });
-
 
 //For map
 function myMap() {
@@ -72,3 +68,18 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("gMap"), mapProp);
 }
+
+(function ($) {
+    $(['data-taphover']).on("touchstart", function (e) {
+        "use strict"; //satisfy the code inspectors
+        var link = $(this); //preselect the link
+        if (link.hasClass('hover')) {
+            return true;
+        } else {
+            link.addClass("hover");
+            $(['data-taphover']).not(this).removeClass("hover");
+            e.preventDefault();
+            return false; //extra, and to make sure the function has consistent return points
+        }
+    });
+})(jQuery);

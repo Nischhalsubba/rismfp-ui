@@ -1,170 +1,49 @@
-
-
-
-// --------------------Download section -----------------
-.download_section {
-    h5 {
-        font-family: 'Fira Sans', sans-serif;
-        line-height: 30px;
-        font-weight: 300;
-    }
+html {
+    height: 100%;
+    width: 100%;
 }
 
-
-// ------------------.Recent_news-----------------------
-.Recent_news {
-    .section-title {
-        p {
-            font-weight: 500;
-        }
-
-        h3 {
-            display: inline !important;
-        }
-
-        small {
-            font-size: 18px;
-            font-weight: 300;
-        }
-    }
-
-    h5 {
-        line-height: 30px !important;
-    }
+body {
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 36px;
+    background-color: $web-primary;
+    font-size: 20px;
+    font-weight: 300;
+    height: 100%;
+    width: 100%;
 }
 
-
-
-
-
-// ------------------- about_us -------------------------
-.about_us {
-    h1 {
-        font-family: 'Fira Sans', sans-serif;
-        text-transform: none !important;
-    }
-
-    p {
-        font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        line-height: 34px;
-        font-weight: 400;
-    }
+p {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    font-weight: 300;
 }
 
-
-// ------------------Footer ----------------------------------
-footer {
-    h4 {
-        font-weight: 400;
-    }
+h1 {
+    text-transform: none !important;
+    font-weight: 400;
 }
 
-//------------------Downoad page-------------------------------
-.download_head {
-    h1 {
-        font-weight: 400;
-    }
-
-    h4 {
-        font-weight: 300;
-    }
+small {
+    font-size: 18px;
+    font-weight: 300;
 }
 
-.downloads {
-
-
-    .card-body {
-        color: $text-white;
-    }
+h4 {
+    font-weight: 400;
 }
 
-
-//---------------------News and notices--------------------------------
-.news_head {
-    color: $text-white;
-    h1 {
-        font-weight: 400;
-    }
-
-    h4 {
-        font-weight: 300;
-    }
-}
-
-.news{
-    .mst-widget-title{
+.news {
+    .mst-widget-title {
         font-size: 20px !important;
         font-weight: 500;
     }
 
-    .sidebar{
-        .sidebar-content{
+    .sidebar {
+        .sidebar-content {
             font-size: 14px;
             font-weight: 400;
             line-height: 25px;
         }
-    }
-}
-
-//----------------------Contact page--------------------------------
-.contact-head {
-    h1 {
-        font-weight: 400;
-    }
-
-    h4 {
-        font-weight: 300;
-    }
-
-}
-
-//------------------Web based MIS-------------------------------------
-.web-based-mis-head {
-    color: $text-white;
-
-    h1 {
-        font-weight: 400;
-    }
-
-    h4 {
-        font-weight: 300;
-    }
-}
-
-.web-bsed-mis {
-    p {
-        font-family: 'Fira Sans', sans-serif;
-        font-size: 20px;
-        font-weight: 300;
-    }
-
-    li {
-        font-size: 20px;
-        font-weight: 300;
-    }
-}
-
-// ------------------------Introduction---------------------------------
-.introduction-head {
-    color: $text-white;
-
-
-    h1 {
-
-        font-weight: 400;
-    }
-
-    h4 {
-
-        font-weight: 300;
-    }
-}
-
-.introduction {
-    p {
-        font-family: 'Fira Sans', sans-serif;
-        font-size: 20px;
-        font-weight: 300;
     }
 }

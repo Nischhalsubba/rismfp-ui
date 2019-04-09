@@ -1,7 +1,5 @@
 .download_head {
-    background: url('../../images/rawpixel-603653-unsplash.jpg') no-repeat center center fixed;
     display: table;
-    //height: 55vh;
     height: 55%;
     position: relative;
     width: 100%;
@@ -26,14 +24,18 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: -1;
+    display: block;
+}
+
+.parallax-mirror {
+    z-index:1 !important;
 }
 
 .downloads {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     .row {
-
         .card-img-top {
             height: 100%;
             opacity: 1;

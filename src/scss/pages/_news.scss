@@ -1,14 +1,8 @@
 .news_head {
-    background: url('../../images/theodor-lundqvist-198216-unsplash.jpg') no-repeat center center fixed;
     display: table;
-    //height: 55vh;
     height: 55%;
     position: relative;
     width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     z-index: 1;
 
     h1 {
@@ -43,6 +37,8 @@
         -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
     }
+
+
 
 
 
@@ -165,24 +161,34 @@
     /* WIDGET: MyStyle Recent Posts -------------------------------------------- */
 
 
-    .sidebar{
+    .sidebar {
         //border: 1px solid black;
 
-        .sidebar-content{
+        .sidebar-title {
+            .row {
+                background-color: $blue;
+            }
+        }
+
+        .sidebar-content {
+
             //border: 1px solid black;
-            .row{
+            .row {
                 position: relative;
                 display: block;
-                padding: 5px 10px;
-                margin-bottom: -1px;
+                padding: 10px;
                 background-color: #fff;
-                height: 60px;
-                border: 1px solid #ddd;
+                height: auto;
+                border-bottom: 1px solid #ddd;
+
+                .col {
+                    margin-bottom: 10px;
+                }
             }
 
-            .row:hover{
-                background: $green;
-                color: black;
+            .row:hover {
+                background: $light;
+                color: $blue;
             }
         }
     }

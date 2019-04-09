@@ -1,14 +1,8 @@
 .web-based-mis-head {
-    background: url('../../images/rawpixel-653764-unsplash.jpg') no-repeat center center fixed;
     display: table;
-    //height: 55vh;
     height: 55%;
     position: relative;
     width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     z-index: 1;
 
     h1 {
@@ -32,12 +26,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
 
-   
-
     li::before {
         font-family: "Font Awesome 5 Free";
-        font-weight: 900;
         content: "\f058";
-        padding-right: 10px;
+        padding-right: 20px;
     }
 }

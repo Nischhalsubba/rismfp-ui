@@ -33,66 +33,30 @@
     }
 
     .download_section {
-        .full-width {
-            width: 100% !important;
-            padding: 0;
-        }
 
-        .container-fluid {
-            height: 100%;
+        .centering {
+            margin-left: auto !important;
+            margin-right: auto !important;
 
-            .row {
-                display: block;
-                margin: 0 !important;
 
-                .col {
-                    max-width: 75% !important;
-                    margin-top: 25px !important;
+            h3 {
+                a {
+                    font-size: 1.3rem !important;
                 }
-
-                .centering {
-                    margin-left: auto !important;
-                    margin-right: auto !important;
-                }
-            }
-
-            .carousel-control-prev:after {
-                font-family: "Font Awesome 5 Free";
-                content: '\f053';
-                color: black;
-                width: 21px;
-                height: 21px;
-                font-weight: 900;
-                position: absolute;
-                left: 0px;
-
-            }
-
-            .carousel-control-next:after {
-                font-family: "Font Awesome 5 Free";
-                content: '\f054';
-                color: black;
-                width: 21px;
-                height: 21px;
-                font-weight: 900;
-                position: absolute;
-                right: 0px;
 
             }
         }
-
     }
 
     .Recent_news {
         .section-title {
-            padding-left: 10px !important;
 
             h3 {
-                font-size: 14px;
+                font-size: 1.5rem;
             }
 
             small {
-                font-size: 14px !important;
+                font-size: 1rem !important;
             }
         }
 
@@ -113,10 +77,12 @@
     }
 
     .about_us {
-        height: 100% !important;
+        height: auto !important;
 
-        .homepage_about{
+        .homepage_about {
             position: relative !important;
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -148,8 +114,8 @@
     }
 
     //News page
-    .news{
-        .sidebar{
+    .news {
+        .sidebar {
             display: none;
         }
     }
@@ -193,8 +159,15 @@
         }
     }
 
-    .about_us {
-        height: 90% !important;
+    .download_section {
+        h3 {
+            a {
+                font-size: 1.3rem !important;
+            }
+        }
     }
 
+    .about_us {
+        height: auto !important;
+    }
 }
