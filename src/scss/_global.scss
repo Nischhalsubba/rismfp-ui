@@ -6,6 +6,17 @@ a {
     &:hover {
         text-decoration: none;
         list-style-type: none;
+
+    }
+}
+
+.btn {
+
+    &:active,
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        background-image: none;
     }
 }
 
@@ -182,5 +193,3 @@ li {
         }
     }
 }
-
-
