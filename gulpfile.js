@@ -12,7 +12,7 @@ var rename = require('gulp-rename');
 var image = require('gulp-imagemin');
 
 //style paths
-var scssfiles = './src/**/**/*scss';
+var scssfiles = './src/**/**/*.scss';
 var cssDest = './assets/css/';
 
 // Set the browser that you want to support
@@ -110,7 +110,7 @@ gulp.task('images', function () {
 gulp.task('default', function () {
     gulp.watch(scssfiles, gulp.series('styles'));
     gulp.watch(jsfiles, gulp.series('scripts'));
-    gulp.watch(pgfiles, gulp.series('pages'));
+    //gulp.watch(pgfiles, gulp.series('pages'));
     gulp.watch(imgfiles,gulp.series('images'))
 });
 

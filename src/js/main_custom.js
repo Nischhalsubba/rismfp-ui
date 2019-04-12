@@ -53,7 +53,7 @@ $(document).ready(function () {
                 items: 4,
                 nav: true,
             }
-            
+
         }
     })
 
@@ -69,17 +69,29 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("gMap"), mapProp);
 }
 
-(function ($) {
-    $(['data-taphover']).on("touchstart", function (e) {
-        "use strict"; //satisfy the code inspectors
-        var link = $(this); //preselect the link
-        if (link.hasClass('hover')) {
-            return true;
-        } else {
-            link.addClass("hover");
-            $(['data-taphover']).not(this).removeClass("hover");
-            e.preventDefault();
-            return false; //extra, and to make sure the function has consistent return points
-        }
+(function () {
+    'use strict';
+
+    var $mainButton = $(".main-button"),
+        $closeButton = $(".close-button"),
+        $buttonWrapper = $(".button-wrapper"),
+        $ripple = $(".ripple"),
+        $layer = $(".layered-content"),
+        $pool = $('#pool');
+
+    $mainButton.on("click", function () {
+        $buttonWrapper.addClass("clicked").delay(900).queue(function (next) {
+            $layer.addClass("active");
+            $pool.addClass("zindex10");
+            next();
+        });
     });
-})(jQuery);
+
+    $closeButton.on("click", function () {
+        $layer.removeClass("active");
+        $buttonWrapper.removeClass("clicked");
+        $pool.removeClass("zindex10");
+    });
+
+
+})();

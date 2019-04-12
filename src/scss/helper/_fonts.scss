@@ -47,3 +47,27 @@ h4 {
         }
     }
 }
+
+.custom-col {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-weight: 400 !important;
+        font-size: 1rem;
+    }
+}
+
+.heading{
+    font-weight: 400;
+}
+
+
+//---------------------Responsive fonts----------------------------
+@media only screen and (max-width: 768px) {  
+    h1{
+        font-size: 2rem;
+    }
+
+}

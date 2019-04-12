@@ -3,6 +3,8 @@ header {
     background-color: $primary;
 
     nav {
+        z-index: 1;
+
         .container {
             img {
                 width: 115px;

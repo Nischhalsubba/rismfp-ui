@@ -26,9 +26,18 @@
     margin-top: 50px;
     margin-bottom: 50px;
 
-    li::before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f058";
-        padding-right: 20px;
+    ul {
+        list-style-position: inside;
+        margin-left: 1rem;
+
+        li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f058";
+            padding-right: 20px;
+            position: relative;
+            margin:0 5px 0 -45px;
+        }
     }
+
+
 }

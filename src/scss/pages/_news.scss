@@ -171,8 +171,6 @@
         }
 
         .sidebar-content {
-
-            //border: 1px solid black;
             .row {
                 position: relative;
                 display: block;
@@ -183,6 +181,10 @@
 
                 .col {
                     margin-bottom: 10px;
+                }
+
+                &:last-child {
+                    border-bottom: none !important;
                 }
             }
 

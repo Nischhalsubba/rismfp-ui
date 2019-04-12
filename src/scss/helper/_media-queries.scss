@@ -2,6 +2,9 @@
 
     //header
     header {
+        .navbar{
+            z-index: 11 !important;
+        }
         .menu-center {
             li {
                 text-align: center;
@@ -15,20 +18,37 @@
 
     .banner {
         .carousel-inner {
-            height: 100% !important;
+            height: 50vh !important;
+
+            .carousel-item {
+                height: 100% !important;
+            }
         }
 
         .carousel-caption {
             bottom: 5% !important;
 
-            h3 {
-                font-size: 12px;
+
+            .container {
+                text-align: center !important;
+
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: .8rem;
+                    font-weight: 300;
+                }
+
+                button {
+                    font-size: 10px;
+                    height: 25px;
+                }
             }
 
-            button {
-                font-size: 10px;
-                height: 25px;
-            }
+
         }
     }
 
@@ -111,6 +131,14 @@
         }
 
         //------- End of cntct_info---------//
+
+        .footer-credit{
+            *{
+                font-size: 1rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 
     //News page
@@ -149,6 +177,14 @@
             display: block;
         }
     }
+
+    .introduction,
+    .web-bsed-mis{
+        *{
+            letter-spacing: -1px;
+            line-height: 2rem;
+        }
+    }
 }
 
 
@@ -156,6 +192,34 @@
     header {
         .adb {
             display: none;
+        }
+    }
+
+    .banner {
+        .carousel-caption {
+            bottom: 5% !important;
+
+
+            .container {
+                text-align: center !important;
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                button {
+                    font-size: 10px;
+                    
+                }
+            }
+
+
         }
     }
 
@@ -169,5 +233,11 @@
 
     .about_us {
         height: auto !important;
+
+        .homepage_about {
+            position: relative !important;
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
