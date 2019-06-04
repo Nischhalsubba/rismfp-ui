@@ -55,22 +55,24 @@ footer {
 
     //End of Contact info
     .footer-credit {
-        height: 50px;
+        height: 40px;
 
         .copyright {
             background-color: $grey;
+            font-size: 1rem;
         }
 
         .hamroidea {
             background-color: $green;
 
-            p {
-                //color: $text-white !important;
+            span {
+                font-size: 1rem;
 
                 a {
                     text-decoration: none;
                     list-style-type: none;
                     color: $text-white;
+                    font-size: 1rem;
                 }
             }
 

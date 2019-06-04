@@ -1,58 +1,14 @@
-.contact-head {
-    display: table;
-    height: 55%;
-    position: relative;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    z-index: 1;
-    color: $text-white;
-
-    nav {
-        position: relative;
-    }
-
-}
-
-.contact-head::after {
-    content: ""; // ::before and ::after both require content
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: -1;
-}
-
 .contact_page {
-
     form {
-
         input[type=email],
         textarea,
         [type=text] {
             position: relative;
             display: inline-block;
 
-            &::after {
-                content: '';
-                display: block;
-                width: 0;
-                position: absolute;
-                bottom: 0;
-                height: 4px;
-                background: coral;
-                transition: width .5s, background 2s;
-                width: 0;
-            }
-
             &:focus {
                 box-shadow: none;
                 border-radius: 0;
-                //border-bottom: 2px solid green;
                 width: 100%;
             }
 
@@ -67,7 +23,6 @@
             height: 40% !important;
             background-color: $grey;
             color: $text-white;
-
 
             p {
                 font-size: 20px;

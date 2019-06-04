@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: $secondary-font;
     line-height: 36px;
     background-color: $web-primary;
     font-size: 20px;
@@ -21,7 +21,9 @@ p {
 
 h1 {
     text-transform: none !important;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: $primary-font;
+    letter-spacing: 1px;
 }
 
 small {
@@ -34,11 +36,6 @@ h4 {
 }
 
 .news {
-    .mst-widget-title {
-        font-size: 20px !important;
-        font-weight: 500;
-    }
-
     .sidebar {
         .sidebar-content {
             font-size: 14px;
@@ -59,14 +56,17 @@ h4 {
     }
 }
 
-.heading{
+
+.menu-center {
+    font-family: $primary-font;
     font-weight: 400;
+    font-size: 1rem;
 }
 
 
 //---------------------Responsive fonts----------------------------
-@media only screen and (max-width: 768px) {  
-    h1{
+@media only screen and (max-width: 768px) {
+    h1 {
         font-size: 2rem;
     }
 

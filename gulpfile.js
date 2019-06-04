@@ -10,6 +10,7 @@ var autoprefixer = require("gulp-autoprefixer");
 var htmlmin = require("gulp-htmlmin");
 var rename = require('gulp-rename');
 var image = require('gulp-imagemin');
+var concat = require('gulp-concat');
 
 //style paths
 var scssfiles = './src/**/**/*.scss';
@@ -53,8 +54,8 @@ gulp.task('styles', function () {
 
 
 //scripts path
-var jsfiles = "./src/js/*.js",
-    jsdest = "./assets/js/";
+var jsfiles = ["./src/js/main_custom.js","./src/js/owl.carousel.js","./src/js/parallax.min.js","./src/js/scroll-out.min.js"],
+   jsdest = "./assets/js/";
 
 //Gulp task to minify javascript
 gulp.task("scripts", function () {
@@ -62,6 +63,9 @@ gulp.task("scripts", function () {
 
         //Minifying the files
         .pipe(uglify())
+
+        // Concating
+        .pipe(concat("app.js"))
 
         //Output
         .pipe(gulp.dest(jsdest))

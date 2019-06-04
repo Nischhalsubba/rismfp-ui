@@ -17,38 +17,21 @@
     }
 
     .banner {
-        .carousel-inner {
-            height: 50vh !important;
-
-            .carousel-item {
-                height: 100% !important;
-            }
+        .item{
+            
         }
-
-        .carousel-caption {
-            bottom: 5% !important;
-
-
-            .container {
-                text-align: center !important;
-
-                h3 {
-                    font-size: 1rem;
-                    font-weight: 400;
-                }
-
-                p {
-                    font-size: .8rem;
-                    font-weight: 300;
-                }
-
-                button {
-                    font-size: 10px;
-                    height: 25px;
-                }
+        .banner_item_caption{
+            bottom: 20% !important;
+            h2 a{
+                font-size: 1.2rem !important;
+                font-weight: 500 !important;
             }
-
-
+            p{
+                font-size: 1rem;
+            }
+            a{
+                font-size: 1rem;
+            }
         }
     }
 
