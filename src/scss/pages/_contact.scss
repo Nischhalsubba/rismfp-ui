@@ -1,17 +1,19 @@
 .contact_page {
     form {
+        height: 60vh;
+
         input[type=email],
         textarea,
         [type=text] {
-            position: relative;
-            display: inline-block;
+            
 
             &:focus {
                 box-shadow: none;
                 border-radius: 0;
                 width: 100%;
-            }
+            }   
 
+            
             &::placeholder {
                 font-size: 1rem;
             }
@@ -23,9 +25,14 @@
             height: 40% !important;
             background-color: $grey;
             color: $text-white;
+            padding: 25px;
 
             p {
                 font-size: 20px;
+            }
+
+            .contact_cta {
+                padding: 0 25px;
             }
         }
 
@@ -36,6 +43,7 @@
             ul {
                 font-size: 14px;
                 line-height: 35px;
+                margin: 10% 0%;
 
                 a {
                     text-decoration: none;

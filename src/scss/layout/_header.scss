@@ -1,44 +1,32 @@
 //Header
 header {
-    background-color: $primary;
+    
+    padding: 1rem 0rem;
+    .container{
+        display: flex;
+        img {
+            width: 115px;
+            height: 100px;
+        }
 
-    nav {
-        z-index: 1;
+        .tagline{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 0 0 3rem;
 
-        .container {
-            img {
-                width: 115px;
-                height: 100px;
-            }
-
-            .menu-center {
-                .link {
-                    color: $grey;
-                    display: inline-block;
-                    text-decoration: none;
-                    list-style: none;
-                    display: inline-block !important;
-                }
-
-                .link::after {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    height: 3px;
-                    background: $green;
-                    transition: width .5s;
-                }
-
-                .link:hover::after {
-                    width: 100%;
-                }
-
-                a {
-                    padding-right: 20px !important;
-                    letter-spacing: 0px !important;
-
-                }
+            h6{
+                margin: 0 0 5px 0;
+                color: $light-grey;
+                font-size: 12px;
+                font-weight: 300;
             }
         }
+
+        .adb{
+            float: right;
+        }
+
     }
+    
 }

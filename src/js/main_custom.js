@@ -8,7 +8,7 @@ $(document).ready(function () {
             stagePadding: 0,
             margin: 15,
             responsiveClass: true,
-            nav: true,
+            nav: false,
             dots: false,
             navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>',
                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -16,19 +16,19 @@ $(document).ready(function () {
         };
         if (owl.classList.contains("carousel-banner")) {
             own_arguments.responsive = {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
-                },
-                1920: {
-                    items: 1
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    },
+                    1920: {
+                        items: 1
+                    }
                 }
-            }
         }
 
         if (owl.classList.contains("download-carousel")) {
