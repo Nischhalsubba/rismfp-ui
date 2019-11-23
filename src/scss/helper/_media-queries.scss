@@ -2,34 +2,53 @@
 
     //header
     header {
-        .navbar{
+        .navbar {
             z-index: 11 !important;
         }
-        .menu-center {
-            li {
-                text-align: center;
-            }
-        }
+
 
         .adb {
             display: none;
         }
+
+        .tagline {
+            margin: 0 0 0 1rem !important;
+
+            h6 {
+                font-size: .75rem !important;
+                text-align: left;
+            }
+        }
+    }
+
+    nav {
+        .container {
+            justify-content: flex-end !important;
+
+            .menu-center {
+                li {
+                    text-align: center;
+                }
+            }
+        }
     }
 
     .banner {
-        .item{
-            
-        }
-        .banner_item_caption{
+        .item {}
+
+        .banner_item_caption {
             bottom: 20% !important;
-            h2 a{
+
+            h2 a {
                 font-size: 1.2rem !important;
                 font-weight: 500 !important;
             }
-            p{
+
+            p {
                 font-size: 1rem;
             }
-            a{
+
+            a {
                 font-size: 1rem;
             }
         }
@@ -115,8 +134,8 @@
 
         //------- End of cntct_info---------//
 
-        .footer-credit{
-            *{
+        .footer-credit {
+            * {
                 font-size: 1rem;
                 margin: 0;
                 padding: 0;
@@ -162,8 +181,8 @@
     }
 
     .introduction,
-    .web-bsed-mis{
-        *{
+    .web-bsed-mis {
+        * {
             letter-spacing: -1px;
             line-height: 2rem;
         }
@@ -198,7 +217,7 @@
 
                 button {
                     font-size: 10px;
-                    
+
                 }
             }
 

@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //carousel
-    var owlCarousels = document.querySelectorAll('.owl-carousel');
+    //var owlCarousels = document.querySelectorAll('.owl-carousel');
+    var owlCarousels = Array.prototype.slice.call(document.querySelectorAll(".owl-carousel"));
+    
     owlCarousels.forEach(function (owl) {
         var owl_jquery = $(owl);
         var own_arguments = {
@@ -93,7 +95,8 @@ function myMap() {
     $mainButton.on("click", function () {
         $buttonWrapper.addClass("clicked").delay(900).queue(function (next) {
             $layer.addClass("active");
-            $pool.addClass("zindex10");
+            $pool.addClass("zindex10 poolActive");
+            // $pool.removeClass('poolInActive')
             next();
         });
     });
@@ -101,7 +104,7 @@ function myMap() {
     $closeButton.on("click", function () {
         $layer.removeClass("active");
         $buttonWrapper.removeClass("clicked");
-        $pool.removeClass("zindex10");
+        $pool.removeClass("zindex10 poolActive");
     });
 
 })();

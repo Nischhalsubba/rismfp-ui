@@ -7199,11 +7199,23 @@ textarea.form-control {
   header .navbar {
     z-index: 11 !important;
   }
-  header .menu-center li {
-    text-align: center;
-  }
   header .adb {
     display: none;
+  }
+  header .tagline {
+    margin: 0 0 0 1rem !important;
+  }
+  header .tagline h6 {
+    font-size: .75rem !important;
+    text-align: left;
+  }
+  nav .container {
+    -webkit-justify-content: flex-end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  nav .container .menu-center li {
+    text-align: center;
   }
   .banner .banner_item_caption {
     bottom: 20% !important;
@@ -7342,8 +7354,21 @@ textarea.form-control {
 }
 
 nav {
-  z-index: 1;
+  z-index: 11;
   background-color: #F3F1EE;
+}
+
+nav .container button {
+  border: 1px solid red;
+}
+
+nav .container .menu-center .active .link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #81B316;
+  transition: width .5s;
 }
 
 nav .container .menu-center .link {
@@ -7460,6 +7485,10 @@ nav .container .menu-center a {
   transition: 1.25s all ease .5s;
 }
 
+#pool.poolActive {
+  display: block !important;
+}
+
 #pool {
   width: 100%;
   height: 100%;
@@ -7467,6 +7496,7 @@ nav .container .menu-center a {
   position: fixed;
   bottom: 3rem;
   overflow: hidden;
+  display: none;
 }
 
 #pool button {
