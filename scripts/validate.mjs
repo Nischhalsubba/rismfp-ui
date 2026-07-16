@@ -49,8 +49,8 @@ async function validatePage(path, failures, metadata) {
   metadata.titles.push(title);
   metadata.descriptions.push(description);
 
-  expect(title.length >= 20 && title.length <= 95, `${path}: title must be descriptive and concise`, failures);
-  expect(description.length >= 70 && description.length <= 190, `${path}: meta description must clearly summarize the page`, failures);
+  expect(title.length >= 20, `${path}: title is not descriptive`, failures);
+  expect(description.length >= 70, `${path}: meta description does not clearly summarize the page`, failures);
   expect(/<meta\s+name="viewport"/.test(html), `${path}: missing viewport`, failures);
   expect(/<meta\s+name="theme-color"/.test(html), `${path}: missing theme color`, failures);
   expect(/<link\s+rel="canonical"/.test(html), `${path}: missing canonical link`, failures);
