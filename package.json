@@ -1,30 +1,15 @@
 {
-  "name": "misrism",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "rismfp-ui",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A dependency-free, accessible static redesign demo for the historical RISMFP website.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "bootstrap": "^4.2.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "gulp-watch": "^5.0.1",
-    "normalize.css": "^8.0.1",
-    "uikit": "^3.0.2"
+  "engines": {
+    "node": ">=20"
   },
-  "dependencies": {
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "jquery-parallax.js": "^1.5.0",
-    "scroll-out": "^2.2.7"
-  }
+  "license": "MIT"
 }
