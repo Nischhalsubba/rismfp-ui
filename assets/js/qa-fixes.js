@@ -8,6 +8,36 @@ function loadContrastStyles() {
   document.head.append(link);
 }
 
+/** Replaces remaining Web MIS labels with descriptive, search-friendly copy. */
+function applyWebMisMicrocopy() {
+  if (document.body.dataset.page !== 'mis') return;
+
+  document.title = 'RISMFP Web MIS Architecture | Nepal Agriculture Project Monitoring';
+  const description = 'Explore the historical RISMFP Web MIS architecture for Nepal agriculture project monitoring, field reporting, management review and knowledge management.';
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (descriptionMeta) descriptionMeta.setAttribute('content', description);
+  if (ogTitle) ogTitle.setAttribute('content', 'RISMFP Web MIS Architecture | Nepal Agriculture Project Monitoring');
+  if (ogDescription) ogDescription.setAttribute('content', description);
+
+  const eyebrow = document.querySelector('.page-hero--mis .eyebrow');
+  const titleBase = document.querySelector('.page-hero--mis .page-hero__title-base');
+  const titleCutout = document.querySelector('.page-hero--mis .page-hero__title-cutout');
+  const lede = document.querySelector('.page-hero--mis .lede');
+  if (eyebrow) eyebrow.textContent = 'RISMFP project monitoring system';
+  if (titleBase) titleBase.textContent = 'Web MIS architecture for';
+  if (titleCutout) titleCutout.textContent = 'field reporting and management review.';
+  if (lede) lede.textContent = 'Explore how the historical RISMFP Web MIS was intended to organise field activities, financial records, monitoring indicators, management decisions and project knowledge.';
+
+  const nextEyebrow = document.querySelector('.footer-next .eyebrow');
+  const nextHeading = document.querySelector('.footer-next h2');
+  const nextLink = document.querySelector('.footer-next a');
+  if (nextEyebrow) nextEyebrow.textContent = 'Next: historical project records';
+  if (nextHeading) nextHeading.textContent = 'Search RISMFP grant notices, progress updates and retained Nepali document titles.';
+  if (nextLink) nextLink.textContent = 'Search the RISMFP notices archive';
+}
+
 /** Returns the current static navigation and its trigger. */
 function getMenuElements() {
   return {
@@ -191,6 +221,7 @@ function initialiseRecordActions() {
 /** Starts all production QA enhancements after static HTML is available. */
 function initialiseQaFixes() {
   loadContrastStyles();
+  applyWebMisMicrocopy();
   initialiseStaticMenu();
   updateStaticYear();
   initialiseResponsiveToc();
