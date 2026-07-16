@@ -1,42 +1,4 @@
-/** Loads the sitewide contrast stylesheet once on every published route. */
-function loadContrastStyles() {
-  if (document.querySelector('link[data-seo-contrast]')) return;
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = './assets/css/seo-contrast.css';
-  link.dataset.seoContrast = '';
-  document.head.append(link);
-}
-
-/** Replaces remaining Web MIS labels with descriptive, search-friendly copy. */
-function applyWebMisMicrocopy() {
-  if (document.body.dataset.page !== 'mis') return;
-
-  document.title = 'RISMFP Web MIS Architecture | Nepal Agriculture Project Monitoring';
-  const description = 'Explore the historical RISMFP Web MIS architecture for Nepal agriculture project monitoring, field reporting, management review and knowledge management.';
-  const descriptionMeta = document.querySelector('meta[name="description"]');
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const ogDescription = document.querySelector('meta[property="og:description"]');
-  if (descriptionMeta) descriptionMeta.setAttribute('content', description);
-  if (ogTitle) ogTitle.setAttribute('content', 'RISMFP Web MIS Architecture | Nepal Agriculture Project Monitoring');
-  if (ogDescription) ogDescription.setAttribute('content', description);
-
-  const eyebrow = document.querySelector('.page-hero--mis .eyebrow');
-  const titleBase = document.querySelector('.page-hero--mis .page-hero__title-base');
-  const titleCutout = document.querySelector('.page-hero--mis .page-hero__title-cutout');
-  const lede = document.querySelector('.page-hero--mis .lede');
-  if (eyebrow) eyebrow.textContent = 'RISMFP project monitoring system';
-  if (titleBase) titleBase.textContent = 'Web MIS architecture for';
-  if (titleCutout) titleCutout.textContent = 'field reporting and management review.';
-  if (lede) lede.textContent = 'Explore how the historical RISMFP Web MIS was intended to organise field activities, financial records, monitoring indicators, management decisions and project knowledge.';
-
-  const nextEyebrow = document.querySelector('.footer-next .eyebrow');
-  const nextHeading = document.querySelector('.footer-next h2');
-  const nextLink = document.querySelector('.footer-next a');
-  if (nextEyebrow) nextEyebrow.textContent = 'Next: historical project records';
-  if (nextHeading) nextHeading.textContent = 'Search RISMFP grant notices, progress updates and retained Nepali document titles.';
-  if (nextLink) nextLink.textContent = 'Search the RISMFP notices archive';
-}
+const ARCHIVE_SORTS = new Set(['newest', 'oldest', 'title', 'category']);
 
 /** Returns the current static navigation and its trigger. */
 function getMenuElements() {
@@ -89,7 +51,7 @@ function initialiseStaticMenu() {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 960) closeMenu();
+    if (window.innerWidth >= 1120) closeMenu();
   });
 }
 
@@ -129,10 +91,15 @@ function initialiseTocTracking() {
   sections.forEach((section) => observer.observe(section));
 }
 
-/** Reads archive search and category state from the current URL. */
+/** Reads and normalises archive search and control state from the current URL. */
 function readArchiveState() {
   const params = new URLSearchParams(window.location.search);
-  return { query: params.get('q') || '', category: params.get('type') || 'all', sort: params.get('sort') || 'newest' };
+  const requestedSort = params.get('sort') || 'newest';
+  return {
+    query: params.get('q') || '',
+    category: params.get('type') || 'all',
+    sort: ARCHIVE_SORTS.has(requestedSort) ? requestedSort : 'newest',
+  };
 }
 
 /** Stores archive controls in the URL without reloading the page. */
@@ -167,9 +134,9 @@ function initialiseArchive(root) {
 
   const initial = readArchiveState();
   let category = buttons.some((button) => button.dataset.filterButton === initial.category) ? initial.category : 'all';
-  let sort = sortControl instanceof HTMLSelectElement ? initial.sort : 'newest';
+  let sort = initial.sort;
   input.value = initial.query;
-  if (sortControl instanceof HTMLSelectElement && [...sortControl.options].some((option) => option.value === sort)) sortControl.value = sort;
+  if (sortControl instanceof HTMLSelectElement) sortControl.value = sort;
 
   /** Updates visible records from the active controls. */
   function update() {
@@ -192,8 +159,19 @@ function initialiseArchive(root) {
   input.addEventListener('input', update);
   clear?.addEventListener('click', () => { input.value = ''; input.focus(); update(); });
   buttons.forEach((button) => button.addEventListener('click', () => { category = button.dataset.filterButton || 'all'; update(); }));
-  sortControl?.addEventListener('change', () => { if (sortControl instanceof HTMLSelectElement) sort = sortControl.value; update(); });
+  sortControl?.addEventListener('change', () => {
+    if (sortControl instanceof HTMLSelectElement) sort = ARCHIVE_SORTS.has(sortControl.value) ? sortControl.value : 'newest';
+    update();
+  });
   update();
+}
+
+/** Announces a temporary copy-result message without losing the original label. */
+function announceCopyResult(button, message) {
+  const original = button.dataset.defaultLabel || button.textContent || 'Copy document title';
+  button.dataset.defaultLabel = original;
+  button.textContent = message;
+  window.setTimeout(() => { button.textContent = original; }, 1800);
 }
 
 /** Adds copy and research actions to unavailable archive records. */
@@ -208,9 +186,12 @@ function initialiseRecordActions() {
     if (copy instanceof HTMLButtonElement && navigator.clipboard) {
       copy.hidden = false;
       copy.addEventListener('click', async () => {
-        await navigator.clipboard.writeText(title);
-        copy.textContent = 'Title copied';
-        window.setTimeout(() => { copy.textContent = 'Copy document title'; }, 1400);
+        try {
+          await navigator.clipboard.writeText(title);
+          announceCopyResult(copy, 'Title copied');
+        } catch {
+          announceCopyResult(copy, 'Copy failed');
+        }
       });
     }
     if (official instanceof HTMLAnchorElement) official.href = `https://www.google.com/search?q=${encodeURIComponent(`site:gov.np RISMFP ${title}`)}`;
@@ -218,15 +199,15 @@ function initialiseRecordActions() {
   });
 }
 
-/** Starts all production QA enhancements after static HTML is available. */
+/** Starts all progressive enhancements after static HTML is available. */
 function initialiseQaFixes() {
-  loadContrastStyles();
-  applyWebMisMicrocopy();
   initialiseStaticMenu();
   updateStaticYear();
   initialiseResponsiveToc();
   initialiseTocTracking();
-  document.querySelectorAll('[data-filter-root]').forEach((root) => { if (root instanceof HTMLElement) initialiseArchive(root); });
+  document.querySelectorAll('[data-filter-root]').forEach((root) => {
+    if (root instanceof HTMLElement) initialiseArchive(root);
+  });
   initialiseRecordActions();
 }
 
