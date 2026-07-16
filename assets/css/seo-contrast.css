@@ -1,0 +1,149 @@
+/* SEO copy presentation and WCAG-focused contrast refinements. */
+
+:root {
+  --ink: #111c16;
+  --muted: #53615a;
+  --green-900: #0d3b2e;
+  --green-700: #1f6249;
+  --green-100: #e5efe8;
+  --canvas: #f3f0e7;
+  --border: #c8d1cb;
+  --lime-on-dark: #d8f36f;
+  --text-on-dark: #e5eee9;
+  --muted-on-dark: #c6d7cf;
+}
+
+/* Readable provenance below the historical figures. */
+.source-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #fff;
+  color: #435149;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.metric-strip .source-note strong,
+.source-note strong {
+  display: inline;
+  margin: 0;
+  color: var(--green-900);
+  font-size: inherit;
+  font-weight: 800;
+  line-height: inherit;
+  letter-spacing: normal;
+}
+
+/* Foreground and background combinations checked for normal-size text. */
+.lede,
+.section-heading > p,
+.archive-intro > p,
+.archive-item p,
+.document-card p,
+.contact-card address,
+.contact-card dd,
+.record-meta,
+.record-language,
+.record-provenance,
+.unavailable-state,
+.empty-state p,
+.prose p,
+.prose li {
+  color: var(--muted);
+}
+
+.archive-notice {
+  background: #082d23;
+  color: var(--text-on-dark);
+}
+
+.archive-notice strong,
+.section--green .eyebrow,
+.site-footer__links h2,
+.metric-strip strong,
+.document-card__type {
+  color: var(--lime-on-dark);
+}
+
+.metric-strip span,
+.section--green .section-heading > p,
+.system-flow p,
+.link-card--primary p,
+.story-card__content p,
+.site-footer__about p,
+.site-footer__links a,
+.site-footer__bottom {
+  color: var(--muted-on-dark);
+}
+
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.page-hero__media figcaption {
+  background: rgb(5 35 27 / 92%);
+  color: #fff;
+}
+
+input::placeholder {
+  color: #68756e;
+  opacity: 1;
+}
+
+/* Links stay identifiable without relying on color alone. */
+.prose a,
+.record-actions a,
+.contact-card a,
+.source-note a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.prose a:visited,
+.record-actions a:visited,
+.contact-card a:visited {
+  color: #5d3f73;
+}
+
+/* Two-tone focus remains visible on light, lime and dark surfaces. */
+:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #082d23;
+}
+
+/* Clear control boundaries meet non-text contrast requirements. */
+.button--secondary,
+.menu-button,
+.filter-actions button,
+.search-control input,
+.sort-control select,
+.record-actions a,
+.record-actions button {
+  border-color: #89968f;
+}
+
+.filter-actions button[aria-pressed="true"],
+.button--primary,
+.primary-navigation a[aria-current="page"] {
+  background: var(--green-900);
+  color: #fff;
+}
+
+/* Responsive provenance becomes a compact vertical block. */
+@media (max-width: 720px) {
+  .source-note {
+    display: grid;
+    gap: 0.45rem;
+  }
+}
