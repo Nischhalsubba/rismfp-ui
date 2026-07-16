@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
   --ink: #111c16;
   --muted: #627068;
@@ -16,7 +14,7 @@
   --radius-md: 1.35rem;
   --radius-lg: 2rem;
   --shell: min(1240px, calc(100% - 2rem));
-  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-sans: "Segoe UI Variable", "Aptos", Inter, system-ui, sans-serif;
   font-family: var(--font-sans);
 }
 
@@ -72,15 +70,12 @@ h3 { letter-spacing: -.035em; }
 .metric-strip span { display:block; max-width:28ch; margin-top:1rem; color:#cbded5; font-size:.92rem; }
 
 .page-hero { --page-image:none; min-height:560px; align-items:center; background:var(--canvas); color:var(--ink); }
-.page-hero::before { top:2rem; right:max(1rem,calc((100vw - 1240px)/2)); bottom:2rem; left:auto; width:min(46vw,610px); border-radius:var(--radius-lg); background-image:linear-gradient(180deg,transparent 50%,rgb(9 45 36 / 48%)),var(--page-image); background-position:center; background-size:cover; box-shadow:var(--shadow); }
-.page-hero--project { --page-image:url('../images/banner-team.jpg'); background:none; }
-.page-hero--mis { --page-image:url('../images/mis-field.jpg'); background:none; }
-.page-hero--news { --page-image:url('../images/planting.jpg'); background:none; }
-.page-hero--reports { --page-image:url('../images/report-field.jpg'); background:none; }
-.page-hero--contact { --page-image:url('../images/bee-keeping.jpg'); background:none; }
+.page-hero::before { display:none; content:none; background-image:none; }
+.page-hero--project,.page-hero--mis,.page-hero--news,.page-hero--reports,.page-hero--contact { background:none; }
 .page-hero__content { width:min(52%,650px); max-width:none; padding-block:6rem; }
 .page-hero h1,.page-hero .lede { color:inherit; }
 .page-hero .eyebrow { color:var(--green-700); }
+.page-hero__media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 
 .section { padding-block:7rem; }
 .section--canvas { background:var(--paper); }
@@ -148,7 +143,6 @@ h3 { letter-spacing: -.035em; }
   .home-hero__image { inset:0 2rem 0 8%; }
   .metric-strip__grid,.process-grid,.system-flow { grid-template-columns:repeat(2,1fr); }
   .page-hero { min-height:640px; align-items:end; }
-  .page-hero::before { inset:1rem; width:auto; opacity:.38; }
   .page-hero__content { width:100%; max-width:720px; padding-block:6rem 4rem; }
   .page-hero h1,.page-hero .lede { color:#fff; }
   .page-hero .eyebrow { color:#d8f36f; }

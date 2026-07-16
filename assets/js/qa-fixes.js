@@ -79,7 +79,11 @@ function initialiseTocTracking() {
   const observer = new IntersectionObserver((entries) => {
     const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (!visible) return;
-    links.forEach((link) => link.toggleAttribute('aria-current', link.getAttribute('href') === `#${visible.target.id}`));
+    links.forEach((link) => {
+      const isCurrent = link.getAttribute('href') === `#${visible.target.id}`;
+      if (isCurrent) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
   }, { rootMargin: '-20% 0px -65% 0px', threshold: [0.05, 0.25, 0.5] });
 
   sections.forEach((section) => observer.observe(section));
@@ -170,7 +174,7 @@ function initialiseRecordActions() {
       });
     }
     if (official instanceof HTMLAnchorElement) official.href = `https://www.google.com/search?q=${encodeURIComponent(`site:gov.np RISMFP ${title}`)}`;
-    if (archive instanceof HTMLAnchorElement) archive.href = `https://web.archive.org/web/*/${encodeURIComponent(`http://rismfp.gov.np/${title}`)}`;
+    if (archive instanceof HTMLAnchorElement) archive.href = 'https://web.archive.org/web/*/http://rismfp.gov.np/*';
   });
 }
 
