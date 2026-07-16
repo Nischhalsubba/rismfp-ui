@@ -8,7 +8,9 @@
     <title>Web-based MIS | RISMFP Archive</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/agri-theme.css">
+    <link rel="stylesheet" href="./assets/css/flowchart.css">
     <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/flowchart.js"></script>
   </head>
 
   <!-- Document body: identifies the MIS page for navigation state. -->
@@ -59,7 +61,153 @@
         </div>
       </section>
 
-      <!-- Information flow: shows a simple conceptual sequence without a fake dashboard. -->
+      <!-- Interactive architecture: maps how field information moves through the MIS. -->
+      <section class="section architecture-section" aria-labelledby="architecture-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Interactive architecture</p>
+              <h2 id="architecture-title">Explore how information moved through the system.</h2>
+            </div>
+            <p>Zoom, pan, or open the map in fullscreen. Select a node to focus it and read the relationship between field activity, information management, review, and retained knowledge.</p>
+          </div>
+
+          <div class="flowchart" data-flowchart>
+            <!-- Diagram toolbar: exposes mouse, touch, and keyboard-friendly controls. -->
+            <div class="flowchart__toolbar" aria-label="Diagram controls">
+              <div class="flowchart__toolbar-group">
+                <button type="button" data-flowchart-action="zoom-out" aria-label="Zoom out">−</button>
+                <output data-flowchart-zoom aria-live="polite">100%</output>
+                <button type="button" data-flowchart-action="zoom-in" aria-label="Zoom in">+</button>
+              </div>
+              <div class="flowchart__toolbar-group">
+                <button type="button" data-flowchart-action="reset">Reset</button>
+                <button type="button" data-flowchart-action="fullscreen">Fullscreen</button>
+              </div>
+            </div>
+
+            <!-- Diagram viewport: supports wheel zoom, pointer drag, and keyboard navigation. -->
+            <div class="flowchart__viewport" tabindex="0" role="application" aria-label="Interactive RISMFP MIS architecture diagram. Use arrow keys to pan, plus and minus to zoom, and zero to reset." data-flowchart-viewport>
+              <svg class="flowchart__canvas" viewBox="0 0 1400 820" role="img" aria-labelledby="flowchart-title flowchart-description">
+                <title id="flowchart-title">RISMFP web MIS information architecture</title>
+                <desc id="flowchart-description">A diagram showing field actors producing activity and financial data, the web MIS organising it, management reviewing it, and reports and documents supporting accountability and learning.</desc>
+                <defs>
+                  <marker id="flow-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+                    <path d="M 0 0 L 12 6 L 0 12 z"></path>
+                  </marker>
+                  <filter id="node-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="12" stdDeviation="12" flood-opacity="0.12"></feDropShadow>
+                  </filter>
+                </defs>
+
+                <g data-flowchart-scene>
+                  <!-- Connectors: describe the main flow and feedback loop. -->
+                  <g class="flowchart__connections" aria-hidden="true">
+                    <path d="M 310 190 C 420 190, 420 350, 535 350"></path>
+                    <path d="M 310 405 C 420 405, 420 350, 535 350"></path>
+                    <path d="M 310 620 C 420 620, 420 350, 535 350"></path>
+                    <path d="M 845 350 C 955 350, 955 240, 1065 240"></path>
+                    <path d="M 845 350 C 955 350, 955 465, 1065 465"></path>
+                    <path d="M 845 350 C 955 350, 955 660, 1065 660"></path>
+                    <path class="flowchart__connection--feedback" d="M 1170 730 C 1170 785, 680 800, 680 535"></path>
+                  </g>
+
+                  <!-- Input layer: organisations and information entering the system. -->
+                  <g class="flowchart__lane-label" transform="translate(80 85)">
+                    <text>FIELD AND DELIVERY LAYER</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--input" tabindex="0" role="button" aria-label="Field implementers: farmer groups, cooperatives, service providers, and partner organisations" transform="translate(80 120)">
+                    <rect width="230" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Field implementers</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Groups, cooperatives and partners</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--input" tabindex="0" role="button" aria-label="Activity data: implementation progress, outputs, locations, and indicators" transform="translate(80 335)">
+                    <rect width="230" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Activity data</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Progress, outputs and indicators</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--input" tabindex="0" role="button" aria-label="Project records: financial information, documents, evidence, and reference material" transform="translate(80 550)">
+                    <rect width="230" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Project records</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Finance, evidence and documents</text>
+                  </g>
+
+                  <!-- Core platform: the central historical web MIS. -->
+                  <g class="flowchart__lane-label" transform="translate(535 195)">
+                    <text>CORE INFORMATION PLATFORM</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--core" tabindex="0" role="button" aria-label="Web-based MIS: structures information by project component, activity, location, and indicator" transform="translate(535 230)">
+                    <rect width="310" height="240" rx="38"></rect>
+                    <circle cx="58" cy="58" r="24"></circle>
+                    <text class="flowchart-node__kicker" x="38" y="116">CENTRAL SYSTEM</text>
+                    <text class="flowchart-node__title" x="38" y="158">Web-based MIS</text>
+                    <text class="flowchart-node__detail" x="38" y="194">Structure, validate and connect</text>
+                    <text class="flowchart-node__detail" x="38" y="218">project information.</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--support" tabindex="0" role="button" aria-label="Information organisation: components, activities, locations, indicators, and document categories" transform="translate(570 510)">
+                    <rect width="240" height="120" rx="26"></rect>
+                    <text class="flowchart-node__label" x="26" y="54">Information structure</text>
+                    <text class="flowchart-node__detail" x="26" y="82">Components · locations · indicators</text>
+                  </g>
+
+                  <!-- Output layer: management use, reporting, and retained knowledge. -->
+                  <g class="flowchart__lane-label" transform="translate(1065 105)">
+                    <text>REVIEW AND KNOWLEDGE LAYER</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--output" tabindex="0" role="button" aria-label="Management review: monitor progress, delays, compliance, implementation risks, and use of funds" transform="translate(1065 170)">
+                    <rect width="255" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Management review</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Progress, risks and compliance</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--output" tabindex="0" role="button" aria-label="Reporting and accountability: programme reports, indicator review, and implementation oversight" transform="translate(1065 395)">
+                    <rect width="255" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Reporting</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Oversight and accountability</text>
+                  </g>
+
+                  <g class="flowchart-node flowchart-node--output" tabindex="0" role="button" aria-label="Knowledge library: preserve project documents, reference materials, and lessons for future use" transform="translate(1065 590)">
+                    <rect width="255" height="140" rx="28"></rect>
+                    <circle cx="42" cy="42" r="18"></circle>
+                    <text class="flowchart-node__label" x="28" y="90">Knowledge library</text>
+                    <text class="flowchart-node__detail" x="28" y="116">Documents, evidence and learning</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="flowchart__footer">
+              <p data-flowchart-status aria-live="polite">Drag to pan. Scroll to zoom. Select any node to highlight it.</p>
+              <span>Keyboard: arrows pan · +/− zoom · 0 reset</span>
+            </div>
+          </div>
+
+          <!-- Text fallback: preserves the complete meaning outside the interactive canvas. -->
+          <details class="flowchart-fallback">
+            <summary>Read the architecture as text</summary>
+            <ol>
+              <li>Farmer groups, cooperatives, service providers, consultants, NGOs, and other implementing organisations carry out field activities.</li>
+              <li>Activity, output, indicator, financial, location, and supporting-document information enters the web MIS.</li>
+              <li>The MIS structures records around project components, activities, locations, monitoring indicators, and document categories.</li>
+              <li>Project management reviews progress, delays, compliance, risks, and use of allocated funds.</li>
+              <li>Reports and retained documents support accountability, management decisions, institutional memory, and future learning.</li>
+            </ol>
+          </details>
+        </div>
+      </section>
+
+      <!-- Information flow: provides a concise linear explanation after the architecture map. -->
       <section class="section section--green" aria-labelledby="flow-title">
         <div class="shell">
           <div class="section-heading"><div><p class="eyebrow">Information flow</p><h2 id="flow-title">From field activity to management decision</h2></div></div>
