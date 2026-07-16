@@ -3,13 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "A dependency-free, accessible static redesign demo for the historical RISMFP website.",
+  "description": "Dependency-free accessible static redesign of the historical RISMFP website.",
   "scripts": {
-    "dev": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs"
-  },
-  "engines": {
-    "node": ">=20"
+    "serve": "python -m http.server 8000"
   },
   "license": "MIT"
 }

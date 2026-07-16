@@ -1,153 +1,59 @@
-<div align="center">
+# RISMFP UI · 2026 redesign
 
-<img width="100%" src="https://i.ibb.co/Y3s4gjV/smartmockups-jx189h1w.png" alt="RISMFP UI website redesign preview" />
+A dependency-free, accessible static redesign of the historical **Raising Incomes of Small and Medium Farmers Project (RISMFP)** website.
 
-# RISMFP UI
+> This repository is an independent portfolio and frontend demonstration. It is not an official Government of Nepal, RISMFP, or Asian Development Bank service.
 
-### Modern Website Redesign for RISMFP
+## What changed
 
-**A static frontend redesign of the RISMFP website, focused on improved readability, modern layout, faster perceived performance, modular SCSS, Gulp automation, carousel UI, and scroll-based animation.**
+- Replaced Bootstrap 4, jQuery, Gulp, Owl Carousel, Scroll-Out, Font Awesome, and legacy SCSS output.
+- Rebuilt every public page with semantic HTML, modern CSS, and a small ES module.
+- Added responsive navigation, archive search/filtering, honest unavailable-document states, accessible focus styles, reduced-motion support, and a custom 404 page.
+- Preserved historical content while clearly separating it from current or official information.
+- Kept deployment fully compatible with GitHub Pages.
 
-![HTML](https://img.shields.io/badge/HTML-Static%20Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-Modular%20Styles-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![Gulp](https://img.shields.io/badge/Gulp-Workflow-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
-![Carousel](https://img.shields.io/badge/UI-Owl%20Carousel-7C3AED?style=for-the-badge)
-![Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-0F766E?style=for-the-badge)
-
-[Live Demo](https://nischhalsubba.github.io/rismfp-ui/)
-
-</div>
-
----
-
-## ✨ Overview
-
-**RISMFP UI** is a redesigned static frontend for the RISMFP website.
-
-Previous website reference:
+## Architecture
 
 ```text
-http://www.misrism.com/?q=public/home
+.
+├── index.html
+├── introduction.html
+├── web-based-mis.html
+├── news.html
+├── download.html
+├── contact.html
+├── 404.html
+└── assets
+    ├── css/style.css
+    └── js/app.js
 ```
 
-The redesign focuses on making the website feel more modern, readable, and performance-conscious while keeping the implementation lightweight and maintainable.
+The site uses native Web Components for the shared header and footer. Pages remain readable if JavaScript fails; filtering and mobile navigation are progressive enhancements.
 
----
+## Local development
 
-## 🧭 Table of Contents
-
-- [Project Purpose](#-project-purpose)
-- [Designer’s Perspective](#-designers-perspective)
-- [What Changed](#-what-changed)
-- [Technology Used](#-technology-used)
-- [Key Features](#-key-features)
-- [Run Locally](#-run-locally)
-- [Quality Checklist](#-quality-checklist)
-- [Roadmap](#-roadmap)
-
----
-
-## 🎯 Project Purpose
-
-The purpose of this repo is to modernize the RISMFP website frontend and improve the overall user experience through better layout, readability, responsive structure, and lighter frontend workflow.
-
----
-
-## 🎨 Designer’s Perspective
-
-A public organization or program website should make information easy to find, read, and trust.
-
-Key design priorities:
-
-- clearer content hierarchy
-- improved page readability
-- modern visual layout
-- faster loading direction
-- responsive design
-- reusable frontend structure
-- animation that supports orientation without becoming distracting
-
----
-
-## 🔁 What Changed
-
-- Implemented a more modern layout.
-- Improved readability and page hierarchy.
-- Redesigned the website to support better perceived performance.
-- Used modular SCSS for easier future upgrades.
-- Added carousel support through Owl Carousel.
-- Added scroll-triggered animation through Scroll-Out.js.
-
----
-
-## 🛠 Technology Used
-
-| Tool | Purpose |
-|---|---|
-| HTML | Static page structure |
-| SCSS | Modular styling and easier maintenance |
-| Gulp | Workflow automation |
-| Owl Carousel | Carousel/slider UI |
-| Scroll-Out.js | Scroll animation and reveal behavior |
-| GitHub Pages | Static demo deployment |
-
----
-
-## 🌟 Key Features
-
-| Feature | Description |
-|---|---|
-| Modern redesign | Updated layout and visual hierarchy |
-| Responsive UI | Intended to work across device sizes |
-| Modular styles | SCSS structure for maintainability |
-| Carousel support | Owl Carousel used for slider sections |
-| Scroll animation | Scroll-Out.js used for reveal effects |
-| Static demo | Hosted through GitHub Pages |
-
----
-
-## 🚀 Run Locally
-
-Open the static HTML files directly in your browser, or run a local server:
+No build step is required.
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open:
+Open `http://localhost:8000`.
 
-```text
-http://127.0.0.1:8000/
-```
+## Deployment
 
----
+GitHub Pages can publish directly from the repository root. The `.nojekyll` file prevents Jekyll processing.
 
-## ✅ Quality Checklist
+## Design direction
 
-- [ ] Demo link works.
-- [ ] Homepage content is readable.
-- [ ] Carousel sections work.
-- [ ] Scroll animations initialize.
-- [ ] Layout is responsive.
-- [ ] Images are optimized.
-- [ ] Content is updated from the old website.
-- [ ] Links are checked.
+The interface combines public-service clarity with a contemporary editorial system:
 
----
+- dark agricultural green, warm neutral surfaces, and a restrained lime accent
+- Manrope display typography with DM Sans body copy
+- content-first hierarchy and generous spacing
+- explicit archive/disclaimer messaging
+- WCAG-conscious contrast, focus, semantics, and motion
 
-## 🗺 Roadmap
+## License
 
-- Add detailed setup commands if Gulp source files are maintained.
-- Add screenshots for major sections.
-- Add accessibility audit.
-- Add SEO metadata.
-- Add performance audit notes.
-- Replace outdated content and links.
-
----
-
-<div align="center">
-
-A modern static redesign focused on readability, performance, and maintainable frontend structure.
-
-</div>
+MIT for the code in this repository. Historical names and content remain attributable to their original organisations and are included only for archival design context.
