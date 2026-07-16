@@ -1,10 +1,10 @@
 {
   "name": "rismfp-ui",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
-  "type": "module",
-  "description": "Dependency-free accessible static redesign of the historical RISMFP website.",
+  "description": "Static historical interface for the Raising Incomes of Small and Medium Farmers Project.",
   "scripts": {
+    "check": "node --check assets/js/app.js && node scripts/validate.mjs",
     "serve": "python -m http.server 8000"
   },
   "license": "MIT"

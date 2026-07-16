@@ -1,67 +1,150 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Independent modern redesign of the historical RISMFP project website.">
-  <meta name="theme-color" content="#0b3b2e">
-  <title>RISMFP Archive · Modern Redesign</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script type="module" src="./assets/js/app.js"></script>
-</head>
-<body data-page="home">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <site-header></site-header>
-  <main id="main">
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Independent public-service redesign</p>
-        <h1>Clear information for stronger rural livelihoods.</h1>
-        <p class="lede">A modern, accessible reinterpretation of the historical Raising Incomes of Small and Medium Farmers Project website, rebuilt for clarity, trust, and fast static delivery.</p>
-        <div class="actions">
-          <a class="button button-primary" href="./introduction.html">Explore the project <span aria-hidden="true">→</span></a>
-          <a class="button button-secondary" href="./download.html">Browse reports</a>
+  <!-- Document head: metadata and shared assets for the home page. -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Historical RISMFP project information, reports, notices, and web MIS overview.">
+    <meta name="theme-color" content="#123f32">
+    <title>RISMFP Project Information Archive</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="module" src="./assets/js/app.js"></script>
+  </head>
+
+  <!-- Document body: identifies the active navigation item with data-page. -->
+  <body data-page="home">
+    <!-- Skip link: lets keyboard users move directly to the main content. -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Shared header: rendered by the SiteHeader component in app.js. -->
+    <site-header></site-header>
+
+    <!-- Main content: contains the complete home page content. -->
+    <main id="main">
+      <!-- Home hero: introduces the project over an original repository photograph. -->
+      <section class="home-hero">
+        <div class="shell home-hero__content">
+          <p class="eyebrow">Raising Incomes of Small and Medium Farmers Project</p>
+          <h1>Project information, reports and historical notices in one place.</h1>
+          <p class="lede">This static site reorganises material from the former RISMFP interface so the project can be understood without navigating an outdated layout.</p>
+
+          <!-- Hero actions: direct visitors to the two most useful entry points. -->
+          <div class="actions">
+            <a class="button button--primary" href="./introduction.html">Read the project overview</a>
+            <a class="button button--secondary" href="./download.html">Browse reports</a>
+          </div>
+
+          <!-- Project context: summarises the purpose and status of this archive. -->
+          <ul class="home-hero__meta" aria-label="Site information">
+            <li>Historical project material</li>
+            <li>Independent frontend case study</li>
+            <li>GitHub Pages hosted</li>
+          </ul>
         </div>
-        <ul class="trust-list" aria-label="Site qualities">
-          <li>Accessible by default</li><li>No tracking</li><li>GitHub Pages ready</li>
-        </ul>
-      </div>
-      <div class="hero-visual reveal" aria-label="Illustration of connected agriculture information">
-        <div class="orb orb-one"></div><div class="orb orb-two"></div>
-        <div class="dashboard-card">
-          <div class="dashboard-top"><span>Project archive</span><span class="status">Static demo</span></div>
-          <div class="metric"><strong>10</strong><span>historical project districts</span></div>
-          <div class="mini-grid"><article><span>Focus</span><strong>High-value agriculture</strong></article><article><span>Platform</span><strong>Web-based MIS</strong></article></div>
-          <div class="chart" aria-hidden="true"><i style="--h:38%"></i><i style="--h:54%"></i><i style="--h:47%"></i><i style="--h:72%"></i><i style="--h:84%"></i><i style="--h:92%"></i></div>
+      </section>
+
+      <!-- Project facts: highlights figures stated in the historical project material. -->
+      <section class="section shell" aria-labelledby="facts-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Project at a glance</p>
+            <h2 id="facts-title">A value-chain programme focused on rural livelihoods.</h2>
+          </div>
+          <p>The figures below come from the project description retained in the original repository. They are historical targets and estimates, not current programme results.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="notice-strip">
-      <div class="shell notice-inner"><strong>Archive notice</strong><p>This is a portfolio redesign using historical content. It is not an official Government of Nepal, RISMFP, or Asian Development Bank service.</p></div>
-    </section>
+        <div class="fact-grid">
+          <article>
+            <strong>10</strong>
+            <span>historical focus districts in the former Mid-Western and Far-Western regions</span>
+          </article>
+          <article>
+            <strong>220</strong>
+            <span>estimated enterprises intended to receive project support</span>
+          </article>
+          <article>
+            <strong>890</strong>
+            <span>estimated farmer groups referenced in the project materials</span>
+          </article>
+        </div>
+      </section>
 
-    <section class="section shell reveal">
-      <div class="section-heading"><div><p class="eyebrow">Information architecture</p><h2>Find the right information without fighting the interface.</h2></div><p>The original site scattered content across dated layouts and decorative carousels. This rebuild prioritizes direct pathways and readable documents.</p></div>
-      <div class="feature-grid">
-        <a class="feature-card" href="./introduction.html"><span class="feature-number">01</span><h3>Project overview</h3><p>Understand the programme context, beneficiaries, interventions, and intended outcomes.</p><span class="text-link">Read overview →</span></a>
-        <a class="feature-card" href="./web-based-mis.html"><span class="feature-number">02</span><h3>Web-based MIS</h3><p>See how monitoring, evaluation, and knowledge management were intended to work.</p><span class="text-link">View MIS concept →</span></a>
-        <a class="feature-card" href="./news.html"><span class="feature-number">03</span><h3>News archive</h3><p>Browse retained notices in a searchable, clearly dated archive experience.</p><span class="text-link">Browse notices →</span></a>
-        <a class="feature-card" href="./download.html"><span class="feature-number">04</span><h3>Reports</h3><p>Explore historical report titles with honest unavailable-file states.</p><span class="text-link">Browse reports →</span></a>
-      </div>
-    </section>
+      <!-- Key sections: provides direct routes to the site's main information areas. -->
+      <section class="section section--canvas" aria-labelledby="explore-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Explore the archive</p>
+              <h2 id="explore-title">Start with the information you need.</h2>
+            </div>
+            <p>The site is organised around project context, monitoring information, notices, and reports rather than the structure of the previous interface.</p>
+          </div>
 
-    <section class="section section-dark">
-      <div class="shell impact-grid reveal">
-        <div><p class="eyebrow eyebrow-light">Design strategy</p><h2>A public-service interface should earn trust before asking for attention.</h2></div>
-        <div class="principles"><article><strong>01</strong><h3>Content first</h3><p>Readable typography, clear dates, and predictable page structures replace ornamental UI.</p></article><article><strong>02</strong><h3>Progressive enhancement</h3><p>Every page works without JavaScript; interaction adds convenience rather than dependence.</p></article><article><strong>03</strong><h3>Honest states</h3><p>Archived links and nonfunctional services are labelled instead of impersonating live systems.</p></article></div>
-      </div>
-    </section>
+          <div class="link-card-grid">
+            <a class="link-card" href="./introduction.html">
+              <span class="link-card__number">01</span>
+              <h3>Project overview</h3>
+              <p>Read the programme context, intended beneficiaries, interventions, and expected outcomes.</p>
+              <span class="text-link">Open project overview</span>
+            </a>
 
-    <section class="section shell reveal">
-      <div class="cta-card"><div><p class="eyebrow">Open source case study</p><h2>Built with semantic HTML, modern CSS, and a tiny JavaScript layer.</h2><p>No framework, no build dependency, no mystery bundle weighing more than a tractor.</p></div><a class="button button-primary" href="https://github.com/Nischhalsubba/rismfp-ui">View repository <span aria-hidden="true">↗</span></a></div>
-    </section>
-  </main>
-  <site-footer></site-footer>
-</body>
+            <a class="link-card" href="./web-based-mis.html">
+              <span class="link-card__number">02</span>
+              <h3>Web-based MIS</h3>
+              <p>Understand how the project planned to collect, review, and preserve implementation information.</p>
+              <span class="text-link">Read about the MIS</span>
+            </a>
+
+            <a class="link-card" href="./news.html">
+              <span class="link-card__number">03</span>
+              <h3>News and notices</h3>
+              <p>Search the titles retained from the former site and see which original files are unavailable.</p>
+              <span class="text-link">Browse the archive</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Field stories: reuses original project photographs as documentary context. -->
+      <section class="section shell" aria-labelledby="field-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">From the original site</p>
+            <h2 id="field-title">Agriculture was presented as both production and enterprise.</h2>
+          </div>
+          <p>The old repository included field photographs covering farming, team activity, planting, and beekeeping. They are retained here as part of the project record.</p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <img src="./assets/images/banner-team.jpg" alt="Project team members standing together outdoors" loading="lazy">
+            <div class="story-card__content">
+              <h3>Implementation depended on people and partnerships.</h3>
+              <p>The project model involved farmer groups, cooperatives, service providers, local organisations, and project management teams.</p>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <img src="./assets/images/bee-keeping.jpg" alt="Beekeeping activity from the original RISMFP image archive" loading="lazy">
+            <div class="story-card__content">
+              <h3>High-value agriculture included varied rural enterprises.</h3>
+              <p>Support extended beyond crop production to technology, post-harvest systems, and market-oriented activities.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Archive clarification: explains the limitations of the restored interface. -->
+      <section class="section section--green" aria-labelledby="archive-title">
+        <div class="shell narrow">
+          <p class="eyebrow">Archive status</p>
+          <h2 id="archive-title">The interface is active. The historical services are not.</h2>
+          <p>This repository does not provide login access, grant applications, official records, or current project support. It is a frontend reconstruction using material preserved in the original source code.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared footer: rendered by the SiteFooter component in app.js. -->
+    <site-footer></site-footer>
+  </body>
 </html>
