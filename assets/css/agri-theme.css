@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
   --ink: #111c16;
   --muted: #627068;
@@ -16,7 +14,7 @@
   --radius-md: 1.35rem;
   --radius-lg: 2rem;
   --shell: min(1240px, calc(100% - 2rem));
-  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-sans: "Segoe UI Variable", "Aptos", Inter, system-ui, sans-serif;
   font-family: var(--font-sans);
 }
 
