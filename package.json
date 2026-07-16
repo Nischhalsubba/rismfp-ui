@@ -1,10 +1,10 @@
 {
   "name": "rismfp-ui",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "description": "Static historical interface for the Raising Incomes of Small and Medium Farmers Project.",
   "scripts": {
-    "check": "node --check assets/js/app.js && node --check assets/js/flowchart.js && node scripts/validate.mjs",
+    "check": "node --check assets/js/app.js && node --check assets/js/flowchart.js && node --check assets/js/qa-fixes.js && node scripts/validate.mjs",
     "serve": "python -m http.server 8000"
   },
   "license": "MIT"

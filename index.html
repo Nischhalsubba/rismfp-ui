@@ -1,141 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <!-- Document head: metadata and shared assets for the home page. -->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Historical RISMFP project information, reports, notices, and web MIS overview.">
+    <meta name="description" content="Unofficial historical archive of RISMFP project information, document references, notices, and Web MIS material.">
     <meta name="theme-color" content="#103f31">
-    <title>RISMFP Project Information Archive</title>
+    <link rel="canonical" href="https://nischhalsubba.github.io/rismfp-ui/index.html">
+    <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RISMFP Historical Archive">
+    <meta property="og:description" content="Unofficial historical archive of RISMFP project information, document references, notices, and Web MIS material.">
+    <meta property="og:url" content="https://nischhalsubba.github.io/rismfp-ui/index.html">
+    <meta property="og:image" content="https://nischhalsubba.github.io/rismfp-ui/assets/images/banner-farming.jpg">
+    <title>RISMFP Historical Archive</title>
+    <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/agri-theme.css">
+    <link rel="stylesheet" href="./assets/css/qa-fixes.css">
     <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/qa-fixes.js"></script>
   </head>
-
-  <!-- Document body: identifies the active navigation item with data-page. -->
   <body data-page="home">
-    <!-- Skip link: lets keyboard users move directly to the main content. -->
     <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Trust notice: identifies the archive before visitors reach project content. -->
+    <div class="archive-notice" role="note">
+      <div class="shell archive-notice__inner">
+        <strong>Unofficial RISMFP historical archive</strong>
+        <span>This independent reconstruction is not an official or active RISMFP service.</span>
+      </div>
+    </div>
 
-    <!-- Shared header: rendered by the SiteHeader component in app.js. -->
-    <site-header></site-header>
+    <!-- Sticky site header: remains available while visitors move through long pages. -->
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="site-brand" href="./index.html" aria-label="RISMFP historical archive home">
+          <img src="./assets/images/logo.svg" width="72" height="61" alt="RISMFP project logo">
+          <span class="site-brand__text"><strong>RISMFP</strong><small>Unofficial historical archive</small></span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-button__label">Menu</span><span class="menu-button__icon" aria-hidden="true"></span></button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+          <ul><li><a href="./index.html" aria-current="page">Home</a></li><li><a href="./introduction.html">Project</a></li><li><a href="./web-based-mis.html">Web MIS</a></li><li><a href="./news.html">Notices</a></li><li><a href="./download.html">Document index</a></li><li><a href="./contact.html">Contact</a></li></ul>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Main content: contains the complete home page content. -->
     <main id="main">
-      <!-- Home hero: pairs the project introduction with original field photography. -->
+      <!-- Home hero: introduces the archive without covering the documentary photograph with metric cards. -->
       <section class="home-hero">
         <div class="shell home-hero__grid">
-          <div class="home-hero__content reveal">
+          <div class="home-hero__content">
             <p class="eyebrow">Raising Incomes of Small and Medium Farmers Project</p>
             <h1>Rural enterprise, market access and project knowledge.</h1>
-            <p class="lede">A structured archive of the former RISMFP website, bringing project context, reports, notices, and the web-based MIS overview into one clear interface.</p>
-
-            <!-- Hero actions: direct visitors to the two most useful entry points. -->
-            <div class="actions">
-              <a class="button button--primary" href="./introduction.html">Explore the project</a>
-              <a class="button button--secondary" href="./download.html">Browse reports</a>
-            </div>
+            <p class="lede">A structured archive of the former RISMFP website, bringing project context, document references, notices, and the Web MIS overview into one clear interface.</p>
+            <div class="actions"><a class="button button--primary" href="./introduction.html">Explore the project</a><a class="button button--secondary" href="./download.html">View document references</a></div>
           </div>
-
-          <!-- Hero visual: uses an original project photograph with historical figures. -->
-          <div class="home-hero__visual reveal" aria-label="Project field photograph with historical project figures">
-            <div class="home-hero__image">
-              <img src="./assets/images/banner-farming.jpg" alt="RISMFP project team visiting a protected farming site">
-            </div>
-            <div class="hero-card hero-card--top"><strong>10</strong><span>historical focus districts</span></div>
-            <p class="hero-caption">Field implementation connected farmers, service providers, cooperatives, and project teams.</p>
-            <div class="hero-card hero-card--bottom"><strong>890</strong><span>estimated farmer groups referenced in project material</span></div>
-          </div>
+          <figure class="home-hero__visual">
+            <div class="home-hero__image"><img src="./assets/images/banner-farming.jpg" alt="RISMFP project team visiting a protected farming site"></div>
+            <figcaption>Original project photography retained from the earlier repository.</figcaption>
+            <span class="hero-context">Historical project record</span>
+          </figure>
         </div>
       </section>
 
-      <!-- Metric strip: highlights historical project scale without implying current results. -->
-      <section class="metric-strip" aria-label="Historical project scale">
-        <div class="shell metric-strip__grid reveal">
-          <article><strong>10</strong><span>districts in the former Mid-Western and Far-Western development regions</span></article>
-          <article><strong>220</strong><span>estimated enterprises intended to receive support through the project</span></article>
-          <article><strong>890</strong><span>estimated farmer groups referenced in the retained project description</span></article>
+      <!-- Historical project scale: figures are labelled as retained estimates, not current results. -->
+      <section class="metric-strip" aria-labelledby="scale-title">
+        <div class="shell">
+          <div class="metric-strip__heading"><p class="eyebrow">Historical project scale</p><h2 id="scale-title">Figures retained from the former project description.</h2></div>
+          <div class="metric-strip__grid"><article><strong>10</strong><span>historical focus districts in the former Mid-Western and Far-Western regions</span></article><article><strong>220</strong><span>estimated enterprises intended to receive project support</span></article><article><strong>890</strong><span>estimated farmer groups referenced in retained project material</span></article></div>
+          <p class="source-note"><strong>Source:</strong> former RISMFP project description. <strong>Status:</strong> historical estimates, not verified current outcomes.</p>
         </div>
       </section>
 
-      <!-- Key sections: provides direct routes to the site's main information areas. -->
+      <!-- Main archive pathways: semantic modifiers prevent visual styling from depending on card order. -->
       <section class="section section--canvas" aria-labelledby="explore-title">
-        <div class="shell reveal">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Explore the archive</p>
-              <h2 id="explore-title">Project material organised around real visitor needs.</h2>
-            </div>
-            <p>Start with the programme background, understand the monitoring system, or search the historical notices and reports retained from the former site.</p>
-          </div>
-
-          <div class="link-card-grid">
-            <a class="link-card" href="./introduction.html">
-              <span class="link-card__number">01 · Programme</span>
-              <h3>Project overview</h3>
-              <p>Read the programme context, intended beneficiaries, interventions, and expected outcomes.</p>
-              <span class="text-link">Open overview</span>
-            </a>
-
-            <a class="link-card" href="./web-based-mis.html">
-              <span class="link-card__number">02 · Information</span>
-              <h3>Web-based MIS</h3>
-              <p>Understand how implementation information, indicators, and project documents were intended to work together.</p>
-              <span class="text-link">View MIS</span>
-            </a>
-
-            <a class="link-card" href="./news.html">
-              <span class="link-card__number">03 · Archive</span>
-              <h3>News and notices</h3>
-              <p>Search the titles retained from the former project interface.</p>
-              <span class="text-link">Browse notices</span>
-            </a>
-          </div>
+        <div class="shell">
+          <div class="section-heading"><div><p class="eyebrow">Explore the archive</p><h2 id="explore-title">Project material organised around real visitor needs.</h2></div><p>Start with programme background, understand the monitoring system, or search retained notice and document references.</p></div>
+          <div class="link-card-grid"><a class="link-card link-card--primary" href="./introduction.html"><span class="link-card__number">01 - Programme</span><h3>Project overview</h3><p>Read the programme context, intended beneficiaries, interventions, and expected outcomes.</p><span class="text-link">Open overview</span></a><a class="link-card link-card--lime" href="./web-based-mis.html"><span class="link-card__number">02 - Information</span><h3>Web-based MIS</h3><p>Explore the monitoring concept and interactive information architecture.</p><span class="text-link">View MIS</span></a><a class="link-card link-card--mint" href="./news.html"><span class="link-card__number">03 - Archive</span><h3>News and notices</h3><p>Search titles retained from the former project interface.</p><span class="text-link">Browse notices</span></a></div>
         </div>
       </section>
 
-      <!-- Field stories: reuses original project photographs as documentary context. -->
-      <section class="section shell reveal" aria-labelledby="field-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Project in context</p>
-            <h2 id="field-title">Agriculture was treated as both production and enterprise.</h2>
-          </div>
-          <p>The retained photography shows the project operating through people, field activity, local organisations, and value-chain support.</p>
-        </div>
-
-        <div class="story-grid">
-          <article class="story-card">
-            <img src="./assets/images/banner-team.jpg" alt="Project team members standing together outdoors" loading="lazy">
-            <div class="story-card__content">
-              <h3>Implementation depended on local partnerships.</h3>
-              <p>The project model involved farmer groups, cooperatives, service providers, local organisations, and management teams.</p>
-            </div>
-          </article>
-
-          <article class="story-card">
-            <img src="./assets/images/bee-keeping.jpg" alt="Beekeeping activity from the original RISMFP image archive" loading="lazy">
-            <div class="story-card__content">
-              <h3>High-value agriculture covered varied rural enterprises.</h3>
-              <p>Support extended beyond crop production to technology, post-harvest systems, and market-oriented activities.</p>
-            </div>
-          </article>
-        </div>
+      <!-- Documentary context: original photographs remain the main visual evidence. -->
+      <section class="section shell" aria-labelledby="field-title">
+        <div class="section-heading"><div><p class="eyebrow">Project in context</p><h2 id="field-title">Agriculture was treated as both production and enterprise.</h2></div><p>The retained photography shows field activity, local organisations, project staff, and value-chain support.</p></div>
+        <div class="story-grid"><article class="story-card"><img src="./assets/images/banner-team.jpg" alt="Project team members standing together outdoors" loading="lazy"><div class="story-card__content"><h3>Implementation depended on local partnerships.</h3><p>The project model involved farmer groups, cooperatives, service providers, local organisations, and management teams.</p></div></article><article class="story-card story-card--warm"><img src="./assets/images/bee-keeping.jpg" alt="Beekeeping activity from the original RISMFP image archive" loading="lazy"><div class="story-card__content"><h3>High-value agriculture covered varied rural enterprises.</h3><p>Support extended beyond crop production to technology, post-harvest systems, and market-oriented activities.</p></div></article></div>
       </section>
 
-      <!-- Archive clarification: explains the limitations of the restored interface. -->
-      <section class="section section--green" aria-labelledby="archive-title">
-        <div class="shell section-heading reveal">
-          <div>
-            <p class="eyebrow">Archive status</p>
-            <h2 id="archive-title">The interface is active. Historical services are not.</h2>
-          </div>
-          <p>This repository does not provide login access, grant applications, official records, or current project support. It reorganises material preserved in the original source code.</p>
-        </div>
-      </section>
+      <!-- Archive status: clear trust and provenance information. -->
+      <section id="archive-status" class="section section--green" aria-labelledby="archive-title"><div class="shell section-heading"><div><p class="eyebrow">Archive status</p><h2 id="archive-title">The interface is active. Historical services are not.</h2></div><p>This site does not provide login access, grant applications, official records, or current project support. It reorganises material preserved in the original repository.</p></div></section>
     </main>
 
-    <!-- Shared footer: rendered by the SiteFooter component in app.js. -->
-    <site-footer></site-footer>
+    <!-- Contextual continuation: points to the next useful page instead of repeating the current route. -->
+    <aside class="footer-next"><div class="shell footer-next__inner"><div><p class="eyebrow">Continue exploring</p><h2>Continue with the programme background.</h2></div><a class="button button--primary" href="./introduction.html">Explore the project</a></div></aside>
+
+    <!-- Site footer: separates archive ownership, navigation, and technical information. -->
+    <footer class="site-footer">
+      <div class="shell site-footer__grid">
+        <div class="site-footer__about"><a class="site-brand site-brand--footer" href="./index.html"><img src="./assets/images/logo.svg" width="72" height="61" alt=""><span class="site-brand__text"><strong>RISMFP archive</strong><small>Reconstructed by Nischhal Raj Subba</small></span></a><p>Historical project material reorganised as an independent frontend and archival case study.</p></div>
+        <nav class="site-footer__links" aria-label="Archive pages"><h2>Explore</h2><a href="./introduction.html">Project overview</a><a href="./web-based-mis.html">Web MIS</a><a href="./news.html">Notice index</a><a href="./download.html">Document index</a><a href="./contact.html">Historical contacts</a></nav>
+        <nav class="site-footer__links" aria-label="Repository information"><h2>Repository</h2><a class="external-link" href="https://github.com/Nischhalsubba/rismfp-ui" target="_blank" rel="noopener" aria-label="Source code on GitHub, opens in a new tab">Source code</a><a href="./llms.txt">Machine-readable archive notice</a></nav>
+      </div>
+      <div class="shell site-footer__bottom"><span>&copy; <span data-current-year>2026</span> Nischhal Raj Subba</span><span>Static site hosted with GitHub Pages</span></div>
+    </footer>
   </body>
 </html>
