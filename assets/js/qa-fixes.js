@@ -1,3 +1,13 @@
+/** Loads the sitewide contrast stylesheet once on every published route. */
+function loadContrastStyles() {
+  if (document.querySelector('link[data-seo-contrast]')) return;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = './assets/css/seo-contrast.css';
+  link.dataset.seoContrast = '';
+  document.head.append(link);
+}
+
 /** Returns the current static navigation and its trigger. */
 function getMenuElements() {
   return {
@@ -169,8 +179,8 @@ function initialiseRecordActions() {
       copy.hidden = false;
       copy.addEventListener('click', async () => {
         await navigator.clipboard.writeText(title);
-        copy.textContent = 'Copied';
-        window.setTimeout(() => { copy.textContent = 'Copy title'; }, 1400);
+        copy.textContent = 'Title copied';
+        window.setTimeout(() => { copy.textContent = 'Copy document title'; }, 1400);
       });
     }
     if (official instanceof HTMLAnchorElement) official.href = `https://www.google.com/search?q=${encodeURIComponent(`site:gov.np RISMFP ${title}`)}`;
@@ -180,6 +190,7 @@ function initialiseRecordActions() {
 
 /** Starts all production QA enhancements after static HTML is available. */
 function initialiseQaFixes() {
+  loadContrastStyles();
   initialiseStaticMenu();
   updateStaticYear();
   initialiseResponsiveToc();
