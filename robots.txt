@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /
-
-# Independent historical UI redesign demo. Not an official Government of Nepal, RISMFP, or ADB service.
+Allow: /

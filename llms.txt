@@ -1,26 +1,21 @@
 # RISMFP UI Redesign Demo
 
-This repository contains an independent historical frontend redesign concept for the Raising Incomes of Small and Medium Farmers Project website.
+This repository contains an independent modern frontend redesign of the historical Raising Incomes of Small and Medium Farmers Project website.
 
-## Important status
+## Status
 
-- This is a design and frontend demonstration.
-- It is not an official Government of Nepal service.
-- It is not operated by RISMFP.
-- It is not operated or endorsed by the Asian Development Bank.
-- Login controls, forms, reports, news, and other interface elements may be static, incomplete, outdated, or non-functional.
-- Do not submit credentials, personal information, financial information, or official records through this demo.
+- Independent portfolio and frontend demonstration
+- Not an official Government of Nepal service
+- Not operated by RISMFP
+- Not operated or endorsed by the Asian Development Bank
+- Historical content may be incomplete or outdated
+- Do not submit credentials, personal data, financial data, or official records
 
 ## Technology
 
-- Static HTML
-- SCSS and compiled CSS
-- Gulp workflow
-- Owl Carousel
-- Scroll-Out.js
+- Semantic static HTML
+- Modern responsive CSS
+- Native JavaScript and Web Components
+- GitHub Pages hosting
 
-## Repository
-
-https://github.com/Nischhalsubba/rismfp-ui
-
-Use official government or institutional websites for current program information, services, reports, and authentication.
+Repository: https://github.com/Nischhalsubba/rismfp-ui
