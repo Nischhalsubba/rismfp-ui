@@ -10,6 +10,9 @@ const contrastPairs = [
   ['primary text on canvas', '#111c16', '#f3f0e7', 4.5],
   ['muted text on canvas', '#53615a', '#f3f0e7', 4.5],
   ['muted text on white', '#53615a', '#ffffff', 4.5],
+  ['provenance text on white', '#33423b', '#ffffff', 4.5],
+  ['footer secondary text on canvas', '#435149', '#f3f0e7', 4.5],
+  ['footer heading on canvas', '#0d3b2e', '#f3f0e7', 4.5],
   ['white text on green', '#ffffff', '#0d3b2e', 4.5],
   ['lime text on dark green', '#d8f36f', '#082d23', 4.5],
   ['dark-section secondary text', '#c6d7cf', '#082d23', 4.5],
@@ -63,7 +66,7 @@ async function validatePage(path, failures, metadata) {
   expect(!/href=["']#["']/.test(html), `${path}: placeholder link found`, failures);
   expect(!/style=["']/.test(html), `${path}: inline style found`, failures);
   expect(html.includes('assets/css/qa-fixes.css'), `${path}: missing QA stylesheet`, failures);
-  expect(html.includes('assets/js/qa-fixes.js'), `${path}: missing QA module`, failures);
+  expect(html.includes('assets/js/qa-fixes.js'), `${path}: missing enhancement module`, failures);
 
   for (const property of ['og:type', 'og:title', 'og:description', 'og:url', 'og:image']) {
     expect(html.includes(`property="${property}"`), `${path}: missing ${property}`, failures);
@@ -75,11 +78,7 @@ async function validatePage(path, failures, metadata) {
     }
   }
 
-  if (archivePages.includes(path)) {
-    expect(!html.includes('assets/js/app.js'), `${path}: legacy archive controller is still loaded`, failures);
-    expect(/lang="ne"/.test(html), `${path}: missing Nepali language metadata`, failures);
-  }
-
+  if (archivePages.includes(path)) expect(/lang="ne"/.test(html), `${path}: missing Nepali language metadata`, failures);
   discouragedPhrases.forEach((phrase) => expect(!lower.includes(phrase), `${path}: discouraged phrase "${phrase}"`, failures));
   for (const tag of html.match(/<img\b[^>]*>/g) || []) expect(/\balt=["'][^"']*["']/.test(tag), `${path}: image missing alt text`, failures);
 
@@ -107,7 +106,7 @@ function contrastRatio(foreground, background) {
 
 /** Checks JavaScript documentation and critical enhancement behavior. */
 async function validateJavaScript(failures) {
-  for (const path of ['assets/js/app.js', 'assets/js/flowchart.js', 'assets/js/qa-fixes.js']) {
+  for (const path of ['assets/js/flowchart.js', 'assets/js/qa-fixes.js']) {
     const source = await read(path);
     const functions = (source.match(/\bfunction\s+[A-Za-z0-9_]+\s*\(/g) || []).length;
     const documentation = (source.match(/\/\*\*/g) || []).length;
@@ -115,11 +114,19 @@ async function validateJavaScript(failures) {
     expect(documentation >= functions, `${path}: every named function must be documented`, failures);
     expect(source.split('\n').length > 100, `${path}: source appears compressed`, failures);
   }
+
   const qa = await read('assets/js/qa-fixes.js');
   expect(qa.includes("setAttribute('aria-current', 'location')"), 'qa-fixes.js: incorrect TOC current state', failures);
-  expect(qa.includes('https://web.archive.org/web/*/http://rismfp.gov.np/*'), 'qa-fixes.js: missing broad Wayback search', failures);
-  expect(qa.includes('loadContrastStyles()'), 'qa-fixes.js: contrast stylesheet loader is missing', failures);
-  expect(qa.includes('applyWebMisMicrocopy()'), 'qa-fixes.js: Web MIS copy enhancement is missing', failures);
+  expect(qa.includes('ARCHIVE_SORTS.has'), 'qa-fixes.js: archive sort values are not validated', failures);
+  expect(qa.includes('Copy failed'), 'qa-fixes.js: clipboard failures are not handled', failures);
+  expect(!qa.includes('loadContrastStyles'), 'qa-fixes.js: contrast CSS must not be injected at runtime', failures);
+  expect(!qa.includes('applyWebMisMicrocopy'), 'qa-fixes.js: SEO copy must not be changed at runtime', failures);
+
+  const flowchart = await read('assets/js/flowchart.js');
+  expect(flowchart.includes('function fitView'), 'flowchart.js: fit-to-view behavior is missing', failures);
+  expect(flowchart.includes('constrainTranslation'), 'flowchart.js: pan bounds are missing', failures);
+  expect(flowchart.includes('event.ctrlKey') && flowchart.includes('event.metaKey'), 'flowchart.js: ordinary page scrolling is still intercepted', failures);
+  expect(flowchart.includes("setAttribute('aria-pressed'"), 'flowchart.js: selected node state is not exposed', failures);
 }
 
 /** Checks design-system and contrast stylesheets. */
@@ -128,6 +135,7 @@ async function validateCss(failures) {
   const theme = await read('assets/css/agri-theme.css');
   const qa = await read('assets/css/qa-fixes.css');
   const contrast = await read('assets/css/seo-contrast.css');
+
   expect(base.includes('/* Design tokens'), 'style.css: missing token section', failures);
   expect(base.includes('/* Responsive layouts'), 'style.css: missing responsive section', failures);
   expect(qa.includes('.page-hero__title-cutout'), 'qa-fixes.css: missing cutout treatment', failures);
@@ -135,8 +143,12 @@ async function validateCss(failures) {
   expect(/\.page-hero::before\s*\{[^}]*display\s*:\s*none/s.test(theme), 'agri-theme.css: legacy hero pseudo-image is active', failures);
   expect(/\.page-hero__media img\s*\{[^}]*position\s*:\s*absolute/s.test(theme), 'agri-theme.css: hero image does not cover its figure', failures);
   expect(!theme.includes('fonts.googleapis.com'), 'agri-theme.css: unused Google Fonts request found', failures);
-  expect(contrast.includes('.metric-strip .source-note strong'), 'seo-contrast.css: provenance labels inherit metric styling', failures);
+  expect(contrast.includes('.metric-strip .source-note > span'), 'seo-contrast.css: provenance body text does not override metric spans', failures);
+  expect(contrast.includes('.site-footer__about p'), 'seo-contrast.css: footer body contrast override is missing', failures);
+  expect(contrast.includes('@media (max-width: 1120px)'), 'seo-contrast.css: wide navigation breakpoint is missing', failures);
+  expect(contrast.includes('.contact-card dl div'), 'seo-contrast.css: narrow contact rows are not stacked', failures);
   expect(contrast.includes(':focus-visible'), 'seo-contrast.css: visible focus treatment is missing', failures);
+
   contrastPairs.forEach(([name, foreground, background, minimum]) => {
     const ratio = contrastRatio(foreground, background);
     expect(ratio >= minimum, `${name}: ${ratio.toFixed(2)}:1 is below ${minimum}:1`, failures);
@@ -169,7 +181,8 @@ async function run() {
     process.exitCode = 1;
     return;
   }
-  console.log(`Validation passed for ${pages.length} pages, unique SEO metadata, JavaScript behavior, and WCAG contrast pairs.`);
+
+  console.log(`Validation passed for ${pages.length} pages, JavaScript behavior, responsive safeguards, and WCAG contrast pairs.`);
 }
 
 await run();
