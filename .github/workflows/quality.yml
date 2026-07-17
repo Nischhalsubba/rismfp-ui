@@ -31,19 +31,7 @@ jobs:
         run: node --check assets/js/flowchart.js && node --check assets/js/qa-fixes.js && node --check scripts/browser-check.mjs
 
       - name: Validate repository structure
-        run: |
-          set +e
-          node scripts/validate.mjs > validation.log 2>&1
-          status=$?
-          cat validation.log
-          exit $status
-
-      - name: Upload validation diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: validation-diagnostics
-          path: validation.log
+        run: node scripts/validate.mjs
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
