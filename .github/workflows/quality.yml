@@ -27,8 +27,11 @@ jobs:
       - name: Install QA dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Run static checks
+        run: npm run check:static
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run static and browser checks
-        run: npm run check
+      - name: Run browser checks
+        run: npm run check:browser
