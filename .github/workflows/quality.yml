@@ -1,14 +1,12 @@
 # Repository quality checks for every proposed change.
 name: Quality checks
 
-# Run checks for pull requests and updates to the main branch.
 on:
   pull_request:
   push:
     branches:
       - master
 
-# Limit the workflow to read-only repository access.
 permissions:
   contents: read
 
@@ -18,16 +16,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Download the exact commit being tested.
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # Use the current long-term-support Node.js release.
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # Run syntax, structure, accessibility, and link checks.
-      - name: Run repository checks
-        run: npm run check
+      - name: Install QA dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Check JavaScript syntax
+        run: node --check assets/js/flowchart.js && node --check assets/js/qa-fixes.js && node --check scripts/browser-check.mjs
+
+      - name: Validate repository structure
+        run: node scripts/validate.mjs
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser checks
+        run: npm run check:browser
