@@ -10,6 +10,9 @@ const contrastPairs = [
   ['primary text on canvas', '#111c16', '#f3f0e7', 4.5],
   ['muted text on canvas', '#53615a', '#f3f0e7', 4.5],
   ['muted text on white', '#53615a', '#ffffff', 4.5],
+  ['provenance text on white', '#33423b', '#ffffff', 4.5],
+  ['footer secondary text on canvas', '#435149', '#f3f0e7', 4.5],
+  ['footer heading on canvas', '#0d3b2e', '#f3f0e7', 4.5],
   ['white text on green', '#ffffff', '#0d3b2e', 4.5],
   ['lime text on dark green', '#d8f36f', '#082d23', 4.5],
   ['dark-section secondary text', '#c6d7cf', '#082d23', 4.5],
@@ -136,6 +139,9 @@ async function validateCss(failures) {
   expect(/\.page-hero__media img\s*\{[^}]*position\s*:\s*absolute/s.test(theme), 'agri-theme.css: hero image does not cover its figure', failures);
   expect(!theme.includes('fonts.googleapis.com'), 'agri-theme.css: unused Google Fonts request found', failures);
   expect(contrast.includes('.metric-strip .source-note strong'), 'seo-contrast.css: provenance labels inherit metric styling', failures);
+  expect(contrast.includes('.site-footer__links h2'), 'seo-contrast.css: footer heading contrast override is missing', failures);
+  expect(contrast.includes('.site-footer__about p'), 'seo-contrast.css: footer body contrast override is missing', failures);
+  expect(contrast.includes('color: #33423b'), 'seo-contrast.css: provenance body colour is not explicit', failures);
   expect(contrast.includes(':focus-visible'), 'seo-contrast.css: visible focus treatment is missing', failures);
   contrastPairs.forEach(([name, foreground, background, minimum]) => {
     const ratio = contrastRatio(foreground, background);
