@@ -1,40 +1,56 @@
-# Repository quality checks for every proposed change.
-name: Quality checks
+name: Validate and deploy RISMFP UI
 
 on:
-  pull_request:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  validate:
-    name: Validate static site
+  check:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: site
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Install QA dependencies
+      - name: Install validation dependencies
         run: npm install --no-audit --no-fund
-
-      - name: Check JavaScript syntax
-        run: node --check assets/js/flowchart.js && node --check assets/js/qa-fixes.js && node --check scripts/browser-check.mjs
-
-      - name: Validate repository structure
-        run: node scripts/validate.mjs
-
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+      - name: Run static and browser checks
+        run: npm run check
+      - name: Configure GitHub Pages
+        if: github.event_name == 'push'
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
 
-      - name: Run browser checks
-        run: npm run check:browser
+  deploy:
+    if: github.event_name == 'push'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: check
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
