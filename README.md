@@ -2,30 +2,32 @@
 
 # RIS MFP UI
 
-**A maintained static historical interface for the RIS MFP public-facing experience, documented around user flows, visual states, accessibility, and maintainable front-end behavior.**
+**Frozen historical interface for the RIS MFP public-facing experience, preserved as a portfolio/demo artifact.**
 
 ![Top language](https://img.shields.io/github/languages/top/Nischhalsubba/rismfp-ui?style=flat-square)
 ![Last commit](https://img.shields.io/github/last-commit/Nischhalsubba/rismfp-ui?style=flat-square)
 ![Repo size](https://img.shields.io/github/repo-size/Nischhalsubba/rismfp-ui?style=flat-square)
 
-[Browse source](https://github.com/Nischhalsubba/rismfp-ui/tree/master) · [Issues](https://github.com/Nischhalsubba/rismfp-ui/issues)
+[Browse source](https://github.com/Nischhalsubba/rismfp-ui/tree/master)
 
 </div>
 
 ## Status
 
-This repository is maintained as a **static historical interface and public demo/documentation surface**. The deployable site lives under `site/` and is validated with static checks plus Playwright browser checks before GitHub Pages deployment.
+This repository is **historical and read-only by policy**. It is preserved as a static portfolio/demo artifact and is not an actively developed product. The deployable site lives under `site/`; the existing quality workflow remains only to protect the preserved demo from accidental breakage when repository metadata or documentation changes.
 
 It is not the production source of truth for authentication, private project records, payments, or server-side data. Do not place production credentials, personal records, or confidential project data in the static site.
 
-The repository has substantial historical Git size. Normal maintenance should improve the current tree without rewriting history; history cleanup should only be undertaken as a separately reviewed migration with a backup/rollback plan.
+Routine feature work, dependency upgrades, redesigns, framework migrations, and Git-history rewrites are intentionally out of scope. The repository has substantial historical Git size; history cleanup would change commit SHAs and should only be attempted as an explicitly planned migration with a backup/rollback plan.
+
+> GitHub repository archival is the intended final hosting state. Until the repository-level Archive setting is enabled by an administrator, this README is the authoritative maintenance policy: preserve the demo, do not resume normal development.
 
 ## Overview
 
-**RIS MFP UI** is documented as an interface system rather than a pile of screens. Developers can trace presentation and state, designers can reason about components and responsive behavior, and other reviewers can follow how a user reaches a result.
+**RIS MFP UI** is retained as an interface-system artifact rather than as a live transactional application. Reviewers can trace presentation, states, responsive behavior, and accessibility considerations without interpreting the site as current production software.
 
 <details open>
-<summary><strong>🏗️ Interactive UI architecture</strong></summary>
+<summary><strong>🏗️ Preserved UI architecture</strong></summary>
 
 ```mermaid
 flowchart LR
@@ -52,12 +54,12 @@ flowchart TD
 
 | Audience | Focus |
 |---|---|
-| Users | Clear tasks, states and feedback |
-| Developers | Static page structure, front-end behavior and browser tests |
+| Users | Historical demo only; no production transactions |
+| Developers | Preserved static page structure and front-end behavior |
 | Designers | Hierarchy, interaction states, responsive behavior and accessibility |
-| Product / QA | Workflow completeness, edge cases and expected outcomes |
+| Product / QA | Historical workflow completeness and edge cases |
 
-## Getting started
+## Local review
 
 ```bash
 git clone https://github.com/Nischhalsubba/rismfp-ui.git
@@ -66,19 +68,17 @@ npm install
 npm run check
 ```
 
-Use `npm run serve` to run the static site locally.
+Use `npm run serve` to inspect the preserved static site locally.
 
-## Design & accessibility
+## Preservation rules
 
-Keep UI states explicit: loading, empty, error, success, selected, disabled and destructive states should not rely on color alone. Preserve keyboard access, focus visibility, readable density, responsive layouts and recoverable errors.
+- Keep the artifact static and free of production secrets or private data.
+- Do not add live authentication, payment, personal-record, or confidential-data behavior.
+- Do not perform routine dependency churn on this frozen artifact.
+- Keep keyboard access, focus visibility, semantic HTML, readable density, and responsive behavior intact.
+- Treat any change that alters the demo as an exceptional preservation fix requiring review and a green quality workflow.
+- Do not rewrite Git history solely to reduce repository size unless a separate migration is explicitly approved.
 
-## SEO & discoverability
+## Security boundary
 
-For public pages, use accurate RIS MFP product terminology, useful titles/descriptions, semantic headings, canonical URLs and social metadata. Historical or purely demonstrative content should be clearly labeled rather than presented as a live transactional service.
-
-## Contribution flow
-
-```mermaid
-flowchart LR
-    CHANGE["UI / workflow change"] --> STATES["Map affected states"] --> BUILD["Implement"] --> TEST["Static + browser checks"] --> ACCESS["Accessibility review"] --> PR["Pull request"]
-```
+The historical site must remain public-data-only. Any future need for a live transactional product belongs in a separate actively maintained repository with its own security, deployment, data-retention, and authorization model.
