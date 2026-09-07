@@ -1,0 +1,20 @@
+# RISMFP Historical Archive UI
+
+> Unofficial historical archive and frontend case study for the Raising Incomes of Small and Medium Farmers Project (RISMFP). This is not an active Government of Nepal, RISMFP, or Asian Development Bank service.
+
+## Site
+- Home: ./index.html
+- Project introduction: ./introduction.html
+- Web-based MIS: ./web-based-mis.html
+- Historical notices: ./news.html
+- Historical document references: ./download.html
+- Historical contact records: ./contact.html
+
+## Use and provenance
+The site preserves historical project context, public-facing interface patterns, notice titles, document references, and selected project media for archival and portfolio purposes. Project figures, contact details, notices, and descriptions may be outdated. Missing source documents are identified as unavailable rather than replaced with invented downloads.
+
+## Safety and accuracy
+Do not treat this archive as a current government service, operational MIS, authoritative contact directory, or current source of program eligibility, funding, procurement, or policy information. Verify material facts with current official sources before acting on them.
+
+## Technical notes
+The site is a framework-free static HTML/CSS/JavaScript project. Accessibility and QA checks cover metadata, landmarks, keyboard focus, responsive behavior, contrast, local references, and historical-content warnings.
