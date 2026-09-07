@@ -2,7 +2,7 @@
 
 # RIS MFP UI
 
-**A UI-focused repository for the RIS MFP interface, documented around application structure, user flows, visual states, and maintainable front-end behavior.**
+**A maintained static historical interface for the RIS MFP public-facing experience, documented around user flows, visual states, accessibility, and maintainable front-end behavior.**
 
 ![Top language](https://img.shields.io/github/languages/top/Nischhalsubba/rismfp-ui?style=flat-square)
 ![Last commit](https://img.shields.io/github/last-commit/Nischhalsubba/rismfp-ui?style=flat-square)
@@ -11,6 +11,14 @@
 [Browse source](https://github.com/Nischhalsubba/rismfp-ui/tree/master) · [Issues](https://github.com/Nischhalsubba/rismfp-ui/issues)
 
 </div>
+
+## Status
+
+This repository is maintained as a **static historical interface and public demo/documentation surface**. The deployable site lives under `site/` and is validated with static checks plus Playwright browser checks before GitHub Pages deployment.
+
+It is not the production source of truth for authentication, private project records, payments, or server-side data. Do not place production credentials, personal records, or confidential project data in the static site.
+
+The repository has substantial historical Git size. Normal maintenance should improve the current tree without rewriting history; history cleanup should only be undertaken as a separately reviewed migration with a backup/rollback plan.
 
 ## Overview
 
@@ -25,7 +33,7 @@ flowchart LR
     UI --> NAV["Navigation / routing"]
     UI --> COMPONENTS["Reusable UI components"]
     COMPONENTS --> STATE["Application state"]
-    STATE --> DATA["Data / services"]
+    STATE --> DATA["Static/public content"]
     DATA --> RESULT["Rendered result"]
     RESULT --> USER
 ```
@@ -45,7 +53,7 @@ flowchart TD
 | Audience | Focus |
 |---|---|
 | Users | Clear tasks, states and feedback |
-| Developers | Components, data/state flow, services and tests |
+| Developers | Static page structure, front-end behavior and browser tests |
 | Designers | Hierarchy, interaction states, responsive behavior and accessibility |
 | Product / QA | Workflow completeness, edge cases and expected outcomes |
 
@@ -53,10 +61,12 @@ flowchart TD
 
 ```bash
 git clone https://github.com/Nischhalsubba/rismfp-ui.git
-cd rismfp-ui
+cd rismfp-ui/site
+npm install
+npm run check
 ```
 
-Use the package manager and scripts declared by the repository's manifests and lockfiles.
+Use `npm run serve` to run the static site locally.
 
 ## Design & accessibility
 
@@ -64,11 +74,11 @@ Keep UI states explicit: loading, empty, error, success, selected, disabled and 
 
 ## SEO & discoverability
 
-For public pages, use accurate RIS MFP product terminology, useful titles/descriptions, semantic headings, canonical URLs and social metadata. Internal application screens should prioritize task clarity and access control rather than being indexed indiscriminately.
+For public pages, use accurate RIS MFP product terminology, useful titles/descriptions, semantic headings, canonical URLs and social metadata. Historical or purely demonstrative content should be clearly labeled rather than presented as a live transactional service.
 
 ## Contribution flow
 
 ```mermaid
 flowchart LR
-    CHANGE["UI / workflow change"] --> STATES["Map affected states"] --> BUILD["Implement"] --> TEST["Test happy + edge paths"] --> ACCESS["Accessibility review"] --> PR["Pull request"]
+    CHANGE["UI / workflow change"] --> STATES["Map affected states"] --> BUILD["Implement"] --> TEST["Static + browser checks"] --> ACCESS["Accessibility review"] --> PR["Pull request"]
 ```
