@@ -82,3 +82,8 @@ Use `npm run serve` to inspect the preserved static site locally.
 ## Security boundary
 
 The historical site must remain public-data-only. Any future need for a live transactional product belongs in a separate actively maintained repository with its own security, deployment, data-retention, and authorization model.
+
+
+## Root-level GitHub Pages publishing
+
+The standalone static site now lives at repository root (`index.html`, `assets/`, `scripts/`, etc.). The GitHub Pages workflow builds and validates from root and deploys the root artifact. The original nested-site README is preserved at `docs/legacy-site-readme.md`. With Pages set to GitHub Actions, the workflow publishes the public site.
